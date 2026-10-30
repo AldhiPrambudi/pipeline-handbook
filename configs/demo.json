@@ -1,0 +1,15 @@
+{
+  "project": "pipeline_handbook_portfolio",
+  "discovery": {"mode": "auto"},
+  "sources": [
+    {"id": "legacy_dev", "kind": "directory", "environment": "dev", "service": "legacy_orders", "path": "../fixtures/legacy/dev"},
+    {"id": "legacy_prod", "kind": "directory", "environment": "prod", "service": "legacy_orders", "path": "../fixtures/legacy/prod"},
+    {"id": "modern_dev", "kind": "directory", "environment": "dev", "service": "analytics_warehouse", "path": "../fixtures/modern/dev"},
+    {"id": "adversarial", "kind": "directory", "environment": "test", "service": "untrusted_fixture", "path": "../fixtures/adversarial"}
+  ],
+  "technologies": {"include": ["*"], "exclude": [], "overrides": {}},
+  "rules": {"directories": ["../rules"]},
+  "adapters": {"trusted": ["builtin:*"]},
+  "security": {"network_enabled": false, "allowed_endpoints": []},
+  "output": {"directory": "../generated_handbook", "formats": ["markdown", "html", "json"]}
+}

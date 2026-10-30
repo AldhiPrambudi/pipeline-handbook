@@ -1,0 +1,7 @@
+{
+  "technology": "acme",
+  "export_schema": "1",
+  "tasks": {
+    "copy_orders": {"input": "raw.acme_orders", "output": "final.acme_orders"}
+  }
+}

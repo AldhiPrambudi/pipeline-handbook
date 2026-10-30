@@ -1,0 +1,346 @@
+{
+  "format": "pipeline-handbook.environment/v1",
+  "components": [
+    {
+      "name": "host.dev.local",
+      "resource_type": "deployment_resource",
+      "role": "Declared synthetic deployment location",
+      "boundary": "Local demonstration host",
+      "location": "synthetic://dev/lab-node-01",
+      "inspection_points": [
+        {
+          "kind": "definition",
+          "location": "arch_dev/compose.json"
+        }
+      ]
+    },
+    {
+      "name": "warehouse.orders",
+      "technology": "snowflake",
+      "role": "Declared analytical dataset service",
+      "boundary": "Analytics boundary",
+      "location": "metadata-export://synthetic/dev/warehouse",
+      "inspection_points": [
+        {
+          "kind": "metadata",
+          "location": "modern_dev/manifest.json"
+        }
+      ]
+    },
+    {
+      "name": "reporting.portal",
+      "technology": "synthetic-application",
+      "role": "Declared report and form consumer",
+      "boundary": "Consumer boundary",
+      "location": "synthetic://dev/portal",
+      "inspection_points": [
+        {
+          "kind": "definition",
+          "location": "arch_dev/environment-map.json"
+        }
+      ]
+    },
+    {
+      "name": "unplaced.worker",
+      "role": "Declared worker with missing deployment metadata",
+      "boundary": "Unplaced processing"
+    }
+  ],
+  "reports": [
+    {
+      "name": "orders.summary",
+      "report_type": "dashboard",
+      "technology": "synthetic-dashboard",
+      "inspection_points": [
+        {
+          "kind": "definition",
+          "location": "synthetic://dev/reports/orders-summary"
+        }
+      ]
+    },
+    {
+      "name": "orders.review_form",
+      "report_type": "form",
+      "technology": "synthetic-form",
+      "inspection_points": [
+        {
+          "kind": "definition",
+          "location": "synthetic://dev/forms/orders-review"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "source": {
+        "kind": "component",
+        "name": "compose.json::orders-platform::postgres",
+        "environment": "dev",
+        "namespace": "arch_dev",
+        "source_id": "arch_dev",
+        "artifact_path": "compose.json"
+      },
+      "target": {
+        "kind": "deployment_resource",
+        "name": "host.dev.local",
+        "environment": "dev",
+        "namespace": "arch_dev",
+        "source_id": "arch_dev",
+        "artifact_path": "environment-map.json"
+      },
+      "kind": "deployment",
+      "attributes": {
+        "relation": "declared placement on supplied synthetic host"
+      }
+    },
+    {
+      "source": {
+        "kind": "component",
+        "name": "compose.json::orders-platform::airflow",
+        "environment": "dev",
+        "namespace": "arch_dev",
+        "source_id": "arch_dev",
+        "artifact_path": "compose.json"
+      },
+      "target": {
+        "kind": "deployment_resource",
+        "name": "host.dev.local",
+        "environment": "dev",
+        "namespace": "arch_dev",
+        "source_id": "arch_dev",
+        "artifact_path": "environment-map.json"
+      },
+      "kind": "deployment",
+      "attributes": {
+        "relation": "declared placement on supplied synthetic host"
+      }
+    },
+    {
+      "source": {
+        "kind": "component",
+        "name": "compose.json::orders-platform::dbt",
+        "environment": "dev",
+        "namespace": "arch_dev",
+        "source_id": "arch_dev",
+        "artifact_path": "compose.json"
+      },
+      "target": {
+        "kind": "deployment_resource",
+        "name": "host.dev.local",
+        "environment": "dev",
+        "namespace": "arch_dev",
+        "source_id": "arch_dev",
+        "artifact_path": "environment-map.json"
+      },
+      "kind": "deployment",
+      "attributes": {
+        "relation": "declared placement on supplied synthetic host"
+      }
+    },
+    {
+      "source": {
+        "kind": "component",
+        "name": "reporting.portal",
+        "environment": "dev",
+        "namespace": "arch_dev",
+        "source_id": "arch_dev",
+        "artifact_path": "environment-map.json"
+      },
+      "target": {
+        "kind": "deployment_resource",
+        "name": "host.dev.local",
+        "environment": "dev",
+        "namespace": "arch_dev",
+        "source_id": "arch_dev",
+        "artifact_path": "environment-map.json"
+      },
+      "kind": "deployment",
+      "attributes": {
+        "relation": "declared application placement"
+      }
+    },
+    {
+      "source": {
+        "kind": "component",
+        "name": "compose.json::orders-platform::airflow",
+        "environment": "dev",
+        "namespace": "arch_dev",
+        "source_id": "arch_dev",
+        "artifact_path": "compose.json"
+      },
+      "target": {
+        "kind": "component",
+        "name": "compose.json::orders-platform::postgres",
+        "environment": "dev",
+        "namespace": "arch_dev",
+        "source_id": "arch_dev",
+        "artifact_path": "compose.json"
+      },
+      "kind": "connection",
+      "attributes": {
+        "relation": "declared scheduler metadata connection",
+        "protocol": "postgresql"
+      }
+    },
+    {
+      "source": {
+        "kind": "component",
+        "name": "reporting.portal",
+        "environment": "dev",
+        "namespace": "arch_dev",
+        "source_id": "arch_dev",
+        "artifact_path": "environment-map.json"
+      },
+      "target": {
+        "kind": "component",
+        "name": "warehouse.orders",
+        "environment": "dev",
+        "namespace": "arch_dev",
+        "source_id": "arch_dev",
+        "artifact_path": "environment-map.json"
+      },
+      "kind": "connection",
+      "attributes": {
+        "relation": "declared analytical query connection",
+        "protocol": "sql",
+        "read_only": true
+      }
+    },
+    {
+      "source": {
+        "kind": "component",
+        "name": "reporting.portal",
+        "environment": "dev",
+        "namespace": "arch_dev",
+        "source_id": "arch_dev",
+        "artifact_path": "environment-map.json"
+      },
+      "target": {
+        "kind": "component",
+        "name": "compose.json::orders-platform::postgres",
+        "environment": "dev",
+        "namespace": "arch_dev",
+        "source_id": "arch_dev",
+        "artifact_path": "compose.json"
+      },
+      "kind": "connection",
+      "attributes": {
+        "relation": "declared legacy form data connection",
+        "protocol": "postgresql",
+        "read_only": true
+      }
+    },
+    {
+      "source": {
+        "kind": "dataset",
+        "name": "DEMO.FINAL.ORDERS",
+        "environment": "dev",
+        "namespace": "analytics_warehouse",
+        "source_id": "modern_dev",
+        "artifact_path": "manifest.json"
+      },
+      "target": {
+        "kind": "report",
+        "name": "orders.summary",
+        "environment": "dev",
+        "namespace": "arch_dev",
+        "source_id": "arch_dev",
+        "artifact_path": "environment-map.json"
+      },
+      "kind": "data_flow",
+      "attributes": {
+        "relation": "declared dashboard dataset consumption",
+        "read_only": true
+      }
+    },
+    {
+      "source": {
+        "kind": "dataset",
+        "name": "final.orders",
+        "environment": "dev",
+        "namespace": "legacy_orders",
+        "source_id": "legacy_dev",
+        "artifact_path": "publish.sql"
+      },
+      "target": {
+        "kind": "report",
+        "name": "orders.review_form",
+        "environment": "dev",
+        "namespace": "arch_dev",
+        "source_id": "arch_dev",
+        "artifact_path": "environment-map.json"
+      },
+      "kind": "data_flow",
+      "attributes": {
+        "relation": "declared form dataset consumption",
+        "read_only": true
+      }
+    },
+    {
+      "source": {
+        "kind": "task",
+        "name": "dag.py::warehouse_orders::stage",
+        "environment": "dev",
+        "namespace": "modern_dev",
+        "source_id": "modern_dev",
+        "artifact_path": "dag.py"
+      },
+      "target": {
+        "kind": "pipeline",
+        "name": "manifest.json::model.synthetic_orders.staging_orders",
+        "environment": "dev",
+        "namespace": "modern_dev",
+        "source_id": "modern_dev",
+        "artifact_path": "manifest.json"
+      },
+      "kind": "invocation",
+      "attributes": {
+        "relation": "reviewed exact task-to-model binding"
+      }
+    },
+    {
+      "source": {
+        "kind": "task",
+        "name": "dag.py::warehouse_orders::publish",
+        "environment": "dev",
+        "namespace": "modern_dev",
+        "source_id": "modern_dev",
+        "artifact_path": "dag.py"
+      },
+      "target": {
+        "kind": "pipeline",
+        "name": "manifest.json::model.synthetic_orders.final_orders",
+        "environment": "dev",
+        "namespace": "modern_dev",
+        "source_id": "modern_dev",
+        "artifact_path": "manifest.json"
+      },
+      "kind": "invocation",
+      "attributes": {
+        "relation": "reviewed exact task-to-model binding"
+      }
+    },
+    {
+      "source": {
+        "kind": "component",
+        "name": "reporting.portal",
+        "environment": "dev",
+        "namespace": "arch_dev",
+        "source_id": "arch_dev",
+        "artifact_path": "environment-map.json"
+      },
+      "target": {
+        "kind": "component",
+        "name": "not.exported.service",
+        "environment": "dev",
+        "namespace": "arch_dev",
+        "source_id": "arch_dev",
+        "artifact_path": "missing-export.json"
+      },
+      "kind": "connection",
+      "attributes": {
+        "relation": "unavailable metadata reference must remain unresolved"
+      }
+    }
+  ]
+}

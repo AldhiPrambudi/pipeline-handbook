@@ -1,0 +1,2046 @@
+{
+  "schema_version": "1",
+  "entries": [
+    {
+      "id": "builtin.pentaho",
+      "version": "1.0.0",
+      "technology": "pentaho",
+      "family": "etl",
+      "applicable_versions": [
+        "PDI 9.4 fixture subset"
+      ],
+      "positive": [
+        {
+          "kind": "xml_structure",
+          "category": "recognized",
+          "reason": "structural xml_structure signature",
+          "values": [
+            "transformation",
+            "info/name",
+            "step/type"
+          ]
+        },
+        {
+          "kind": "xml_structure",
+          "category": "recognized",
+          "reason": "structural xml_structure signature",
+          "values": [
+            "job",
+            "name",
+            "entries/entry/type"
+          ]
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "pentaho",
+        "kettle"
+      ],
+      "adapters": [
+        "builtin:pentaho"
+      ],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "xml"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "unsupported",
+        "metadata_extraction": "subset",
+        "table_lineage": "subset",
+        "column_lineage": "subset",
+        "control_flow": "subset",
+        "schedules": "unsupported",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "KTR TableInput/TableOutput and enabled stream hops only; job literal TRANS/SHELL references and conditional hops. No proprietary plugins or general step semantics.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [
+        "tests/test_acceptance.py",
+        "tests/test_core.py"
+      ],
+      "fixtures": [
+        "fixtures/legacy",
+        "fixtures/modern",
+        "fixtures/adversarial"
+      ],
+      "maturity": "reference",
+      "official_references": [
+        "https://docs.pentaho.com/pdia-data-integration"
+      ],
+      "mapping": {
+        "concept": "pentaho",
+        "explanation": "{name} is a declared {kind} extracted from {technology} evidence; execution is unverified."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "detection-only",
+        "component_inventory": "unsupported",
+        "deployment_configuration": "unsupported",
+        "configured_connections": "unsupported",
+        "report_consumers": "unsupported",
+        "exact_bindings": "unsupported",
+        "architecture_views": "subset",
+        "workflow_walkthroughs": "subset"
+      }
+    },
+    {
+      "id": "builtin.postgresql",
+      "version": "1.0.0",
+      "technology": "postgresql",
+      "family": "database",
+      "applicable_versions": [
+        "PostgreSQL 16 SQL fixture subset",
+        "15/16 image declarations"
+      ],
+      "positive": [
+        {
+          "kind": "contains_all",
+          "category": "recognized",
+          "reason": "structural contains_all signature",
+          "values": [
+            "-- dialect: postgres"
+          ]
+        },
+        {
+          "kind": "contains_all",
+          "category": "recognized",
+          "reason": "structural contains_all signature",
+          "values": [
+            "<type>POSTGRESQL</type>",
+            "<connection>"
+          ]
+        },
+        {
+          "kind": "json_fields",
+          "category": "declared",
+          "reason": "structural json_fields signature",
+          "fields": {
+            "technology": "postgresql",
+            "server_version": "$present"
+          },
+          "version_field": "server_version",
+          "version_kind": "server"
+        },
+        {
+          "kind": "docker_from",
+          "category": "declared",
+          "reason": "structural docker_from signature",
+          "version_kind": "server",
+          "values": [
+            "postgres"
+          ]
+        },
+        {
+          "kind": "python_import",
+          "values": [
+            "psycopg",
+            "psycopg2"
+          ],
+          "category": "declared",
+          "reason": "PostgreSQL client import; no server version, deployment or successful connection is observed"
+        },
+        {
+          "kind": "compose_image",
+          "values": [
+            "postgres",
+            "docker.io/library/postgres"
+          ],
+          "category": "declared",
+          "reason": "PostgreSQL image declaration in normalized Compose metadata; runtime version remains unobserved",
+          "version_kind": "server"
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "postgresql",
+        "postgres"
+      ],
+      "adapters": [
+        "builtin:sql"
+      ],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "sql",
+        "xml",
+        "json",
+        "dockerfile"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "subset",
+        "metadata_extraction": "subset",
+        "table_lineage": "subset",
+        "column_lineage": "subset",
+        "control_flow": "unsupported",
+        "schedules": "unsupported",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "SQL subset requires explicit postgres dialect; single-source direct projections only for column lineage. XML connection alone is detection, not SQL extraction.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [
+        "tests/test_acceptance.py",
+        "tests/test_core.py"
+      ],
+      "fixtures": [
+        "fixtures/legacy",
+        "fixtures/modern",
+        "fixtures/adversarial"
+      ],
+      "maturity": "reference",
+      "official_references": [
+        "https://www.postgresql.org/docs/16/sql-createtableas.html"
+      ],
+      "mapping": {
+        "concept": "postgresql",
+        "explanation": "{name} is a declared {kind} extracted from {technology} evidence; execution is unverified."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "detection-only",
+        "component_inventory": "unsupported",
+        "deployment_configuration": "unsupported",
+        "configured_connections": "unsupported",
+        "report_consumers": "unsupported",
+        "exact_bindings": "unsupported",
+        "architecture_views": "subset",
+        "workflow_walkthroughs": "subset"
+      }
+    },
+    {
+      "id": "builtin.shell",
+      "version": "1.0.0",
+      "technology": "shell",
+      "family": "language",
+      "applicable_versions": [
+        "*"
+      ],
+      "positive": [
+        {
+          "kind": "shell",
+          "category": "recognized",
+          "reason": "structural shell signature"
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "shell",
+        "bash"
+      ],
+      "adapters": [
+        "builtin:shell"
+      ],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "sh"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "unsupported",
+        "metadata_extraction": "subset",
+        "table_lineage": "unsupported",
+        "column_lineage": "unsupported",
+        "control_flow": "subset",
+        "schedules": "unsupported",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "Static literal command references only; unknown cwd, expansion, loops and pipelines remain gaps.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [
+        "tests/test_acceptance.py",
+        "tests/test_core.py"
+      ],
+      "fixtures": [
+        "fixtures/legacy",
+        "fixtures/modern",
+        "fixtures/adversarial"
+      ],
+      "maturity": "reference",
+      "official_references": [
+        "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html"
+      ],
+      "mapping": {
+        "concept": "shell",
+        "explanation": "{name} is a declared {kind} extracted from {technology} evidence; execution is unverified."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "detection-only",
+        "component_inventory": "unsupported",
+        "deployment_configuration": "unsupported",
+        "configured_connections": "unsupported",
+        "report_consumers": "unsupported",
+        "exact_bindings": "unsupported",
+        "architecture_views": "subset",
+        "workflow_walkthroughs": "subset"
+      }
+    },
+    {
+      "id": "builtin.cron",
+      "version": "1.0.0",
+      "technology": "cron",
+      "family": "scheduler",
+      "applicable_versions": [
+        "*"
+      ],
+      "positive": [
+        {
+          "kind": "cron",
+          "category": "recognized",
+          "reason": "structural cron signature"
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "cron",
+        "crontab"
+      ],
+      "adapters": [
+        "builtin:shell"
+      ],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "cron"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "unsupported",
+        "metadata_extraction": "subset",
+        "table_lineage": "unsupported",
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "schedules": "subset",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "Five-field cron subset, timezone/context not inferred; commands are declarations.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [
+        "tests/test_acceptance.py",
+        "tests/test_core.py"
+      ],
+      "fixtures": [
+        "fixtures/legacy",
+        "fixtures/modern",
+        "fixtures/adversarial"
+      ],
+      "maturity": "reference",
+      "official_references": [
+        "https://man7.org/linux/man-pages/man5/crontab.5.html"
+      ],
+      "mapping": {
+        "concept": "cron",
+        "explanation": "{name} is a declared {kind} extracted from {technology} evidence; execution is unverified."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "detection-only",
+        "component_inventory": "unsupported",
+        "deployment_configuration": "unsupported",
+        "configured_connections": "unsupported",
+        "report_consumers": "unsupported",
+        "exact_bindings": "unsupported",
+        "architecture_views": "subset",
+        "workflow_walkthroughs": "subset"
+      }
+    },
+    {
+      "id": "builtin.airflow",
+      "version": "1.0.0",
+      "technology": "airflow",
+      "family": "orchestrator",
+      "applicable_versions": [
+        "Airflow 2.10 fixture subset"
+      ],
+      "positive": [
+        {
+          "kind": "python_import",
+          "category": "recognized",
+          "reason": "structural python_import signature",
+          "values": [
+            "airflow"
+          ]
+        },
+        {
+          "kind": "dependency",
+          "category": "declared",
+          "reason": "structural dependency signature",
+          "version_kind": "tool",
+          "values": [
+            "apache-airflow"
+          ]
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "airflow"
+      ],
+      "adapters": [
+        "builtin:airflow"
+      ],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "py",
+        "txt"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "subset",
+        "metadata_extraction": "subset",
+        "table_lineage": "unsupported",
+        "column_lineage": "unsupported",
+        "control_flow": "subset",
+        "schedules": "subset",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "AST literal DAG/tasks and >>/<< dependencies only; no imports or DAG execution; dynamic factories unsupported.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [
+        "tests/test_acceptance.py",
+        "tests/test_core.py"
+      ],
+      "fixtures": [
+        "fixtures/legacy",
+        "fixtures/modern",
+        "fixtures/adversarial"
+      ],
+      "maturity": "reference",
+      "official_references": [
+        "https://airflow.apache.org/docs/apache-airflow/2.10.4/core-concepts/tasks.html"
+      ],
+      "mapping": {
+        "concept": "airflow",
+        "explanation": "{name} is a declared {kind} extracted from {technology} evidence; execution is unverified."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "detection-only",
+        "component_inventory": "unsupported",
+        "deployment_configuration": "unsupported",
+        "configured_connections": "unsupported",
+        "report_consumers": "unsupported",
+        "exact_bindings": "unsupported",
+        "architecture_views": "subset",
+        "workflow_walkthroughs": "subset"
+      }
+    },
+    {
+      "id": "builtin.dbt",
+      "version": "1.0.0",
+      "technology": "dbt",
+      "family": "transformation",
+      "applicable_versions": [
+        "manifest v12 / dbt 1.8 fixtures"
+      ],
+      "positive": [
+        {
+          "kind": "json_fields",
+          "category": "recognized",
+          "reason": "structural json_fields signature",
+          "fields": {
+            "metadata.dbt_schema_version": "https://schemas.getdbt.com/dbt/manifest/v12.json",
+            "nodes": "$object",
+            "sources": "$object"
+          },
+          "version_field": "metadata.dbt_version",
+          "version_kind": "tool"
+        },
+        {
+          "kind": "dependency",
+          "category": "declared",
+          "reason": "structural dependency signature",
+          "version_kind": "tool",
+          "values": [
+            "dbt-core"
+          ]
+        },
+        {
+          "kind": "json_fields",
+          "category": "recognized",
+          "reason": "dbt manifest metadata and dependency containers; version support validated by adapter",
+          "fields": {
+            "metadata.dbt_schema_version": "$present",
+            "nodes": "$object",
+            "sources": "$object"
+          }
+        },
+        {
+          "kind": "contains_all",
+          "values": [
+            "config-version: 2",
+            "model-paths:",
+            "profile:"
+          ],
+          "category": "declared",
+          "reason": "dbt project configuration structure; no compiled manifest or successful run is established"
+        },
+        {
+          "kind": "contains_all",
+          "values": [
+            "pip install",
+            "dbt-postgres=="
+          ],
+          "category": "declared",
+          "reason": "dbt PostgreSQL adapter dependency in container build declaration; not warehouse server version"
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "dbt"
+      ],
+      "adapters": [
+        "builtin:dbt"
+      ],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "json",
+        "txt"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "subset",
+        "metadata_extraction": "subset",
+        "table_lineage": "subset",
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "schedules": "unsupported",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "Manifest v12 dependency edges and columns metadata; no compiled SQL column analysis or execution; other manifest schemas reported as unsupported.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures.",
+        "Unrecognized manifest schema versions remain detected with unsupported extraction reported."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [
+        "tests/test_acceptance.py",
+        "tests/test_core.py"
+      ],
+      "fixtures": [
+        "fixtures/legacy",
+        "fixtures/modern",
+        "fixtures/adversarial"
+      ],
+      "maturity": "reference",
+      "official_references": [
+        "https://docs.getdbt.com/reference/artifacts/manifest-json"
+      ],
+      "mapping": {
+        "concept": "dbt",
+        "explanation": "{name} is a declared {kind} extracted from {technology} evidence; execution is unverified."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "detection-only",
+        "component_inventory": "unsupported",
+        "deployment_configuration": "unsupported",
+        "configured_connections": "unsupported",
+        "report_consumers": "unsupported",
+        "exact_bindings": "unsupported",
+        "architecture_views": "subset",
+        "workflow_walkthroughs": "subset"
+      }
+    },
+    {
+      "id": "builtin.snowflake",
+      "version": "1.0.0",
+      "technology": "snowflake",
+      "family": "warehouse",
+      "applicable_versions": [
+        "*"
+      ],
+      "positive": [
+        {
+          "kind": "json_fields",
+          "category": "declared",
+          "reason": "structural json_fields signature",
+          "fields": {
+            "metadata.adapter_type": "snowflake",
+            "nodes": "$object"
+          }
+        },
+        {
+          "kind": "dependency",
+          "values": [
+            "snowflake-connector-python"
+          ],
+          "category": "declared",
+          "version_kind": "client",
+          "reason": "Snowflake client dependency declaration; warehouse server version remains unknown"
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "snowflake"
+      ],
+      "adapters": [],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "text",
+        "json",
+        "xml",
+        "python"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "unsupported",
+        "metadata_extraction": "unsupported",
+        "table_lineage": "unsupported",
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "schedules": "unsupported",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "Snowflake target declaration only. dbt adapter supplies manifest graph; no direct Snowflake SQL analyzer. Client versions are never reported as server versions.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures.",
+        "Client versions are recorded separately from server/tool versions; no warehouse server version identification."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [
+        "tests/test_acceptance.py",
+        "tests/test_core.py"
+      ],
+      "fixtures": [
+        "fixtures/legacy",
+        "fixtures/modern",
+        "fixtures/adversarial"
+      ],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://docs.snowflake.com/en/user-guide/python-connector"
+      ],
+      "mapping": {
+        "concept": "snowflake",
+        "explanation": "{name} is a declared {kind} extracted from {technology} evidence; execution is unverified."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "detection-only",
+        "component_inventory": "unsupported",
+        "deployment_configuration": "unsupported",
+        "configured_connections": "unsupported",
+        "report_consumers": "unsupported",
+        "exact_bindings": "unsupported",
+        "architecture_views": "unsupported",
+        "workflow_walkthroughs": "unsupported"
+      }
+    },
+    {
+      "id": "builtin.python",
+      "version": "1.0.0",
+      "technology": "python",
+      "family": "language",
+      "applicable_versions": [
+        "*"
+      ],
+      "positive": [
+        {
+          "kind": "python_import",
+          "category": "recognized",
+          "reason": "structural python_import signature",
+          "values": [
+            "pathlib",
+            "json",
+            "os",
+            "sys",
+            "airflow",
+            "dagster",
+            "pyspark"
+          ]
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "python"
+      ],
+      "adapters": [],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "text",
+        "json",
+        "xml",
+        "python"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "unsupported",
+        "metadata_extraction": "unsupported",
+        "table_lineage": "unsupported",
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "schedules": "unsupported",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "Only structural Python import signatures; not every Python program has these imports.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [
+        "tests/test_acceptance.py",
+        "tests/test_core.py"
+      ],
+      "fixtures": [
+        "fixtures/legacy",
+        "fixtures/modern",
+        "fixtures/adversarial"
+      ],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://docs.python.org/3/library/ast.html"
+      ],
+      "mapping": {
+        "concept": "python",
+        "explanation": "{name} is a declared {kind} extracted from {technology} evidence; execution is unverified."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "detection-only",
+        "component_inventory": "unsupported",
+        "deployment_configuration": "unsupported",
+        "configured_connections": "unsupported",
+        "report_consumers": "unsupported",
+        "exact_bindings": "unsupported",
+        "architecture_views": "unsupported",
+        "workflow_walkthroughs": "unsupported"
+      }
+    },
+    {
+      "id": "builtin.docker",
+      "version": "1.1.0",
+      "technology": "docker",
+      "family": "deployment",
+      "applicable_versions": [
+        "Dockerfile FROM declarations",
+        "Compose normalized JSON with name/services/resources"
+      ],
+      "positive": [
+        {
+          "kind": "docker_from",
+          "category": "declared",
+          "reason": "structural docker_from signature"
+        },
+        {
+          "kind": "compose_json",
+          "category": "declared",
+          "reason": "Normalized Compose JSON project, service image/build and resource structures"
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "docker"
+      ],
+      "adapters": [
+        "builtin:compose"
+      ],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "dockerfile",
+        "json"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "unsupported",
+        "metadata_extraction": "subset",
+        "table_lineage": "unsupported",
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "schedules": "unsupported",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "Dockerfile is detection-only; Compose JSON parser extracts static service/image/network/volume/startup declarations.",
+        "Shared networks do not prove communication. Startup conditions do not prove readiness or execution.",
+        "Actual deployment host and running state are unknown. No YAML parsing or Docker calls.",
+        "Base image tags do not establish the Docker engine or CLI version."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [
+        "tests/test_architecture_adapters.py",
+        "tests/test_architecture_acceptance.py"
+      ],
+      "fixtures": [
+        "fixtures/architecture"
+      ],
+      "maturity": "reference",
+      "official_references": [
+        "https://docs.docker.com/reference/cli/docker/compose/config/",
+        "https://docs.docker.com/reference/compose-file/services/"
+      ],
+      "mapping": {
+        "concept": "docker",
+        "explanation": "{name} is a declared {kind} extracted from {technology} evidence; execution is unverified."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "detection-only",
+        "component_inventory": "subset",
+        "deployment_configuration": "subset",
+        "configured_connections": "unsupported",
+        "report_consumers": "unsupported",
+        "exact_bindings": "unsupported",
+        "architecture_views": "subset",
+        "workflow_walkthroughs": "unsupported"
+      }
+    },
+    {
+      "id": "builtin.kubernetes",
+      "version": "1.0.0",
+      "technology": "kubernetes",
+      "family": "deployment",
+      "applicable_versions": [
+        "*"
+      ],
+      "positive": [
+        {
+          "kind": "json_fields",
+          "category": "declared",
+          "reason": "structural json_fields signature",
+          "fields": {
+            "apiVersion": "$present",
+            "kind": "Deployment",
+            "spec": "$object"
+          }
+        },
+        {
+          "kind": "contains_all",
+          "category": "recognized",
+          "reason": "structural contains_all signature",
+          "values": [
+            "apiVersion: apps/v1",
+            "kind: Deployment",
+            "spec:"
+          ]
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "kubernetes"
+      ],
+      "adapters": [],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "text",
+        "json",
+        "xml",
+        "python"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "unsupported",
+        "metadata_extraction": "unsupported",
+        "table_lineage": "unsupported",
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "schedules": "unsupported",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "Detection-only. No YAML parser, deployment semantics or running cluster metadata.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures.",
+        "Signature implemented but not measured against labeled positive fixtures in this MVP."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [],
+      "fixtures": [],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/"
+      ],
+      "mapping": {
+        "concept": "kubernetes",
+        "explanation": "{name} is a declared {kind} extracted from {technology} evidence; execution is unverified."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "detection-only",
+        "component_inventory": "unsupported",
+        "deployment_configuration": "unsupported",
+        "configured_connections": "unsupported",
+        "report_consumers": "unsupported",
+        "exact_bindings": "unsupported",
+        "architecture_views": "unsupported",
+        "workflow_walkthroughs": "unsupported"
+      }
+    },
+    {
+      "id": "builtin.dagster",
+      "version": "1.0.0",
+      "technology": "dagster",
+      "family": "orchestrator",
+      "applicable_versions": [
+        "*"
+      ],
+      "positive": [
+        {
+          "kind": "python_import",
+          "category": "recognized",
+          "reason": "structural python_import signature",
+          "values": [
+            "dagster"
+          ]
+        },
+        {
+          "kind": "dependency",
+          "category": "declared",
+          "reason": "structural dependency signature",
+          "version_kind": "tool",
+          "values": [
+            "dagster"
+          ]
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "dagster"
+      ],
+      "adapters": [],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "text",
+        "json",
+        "xml",
+        "python"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "unsupported",
+        "metadata_extraction": "unsupported",
+        "table_lineage": "unsupported",
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "schedules": "unsupported",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "No Dagster graph adapter.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures.",
+        "Signature implemented but not measured against labeled positive fixtures in this MVP."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [],
+      "fixtures": [],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://docs.dagster.io/"
+      ],
+      "mapping": {
+        "concept": "dagster",
+        "explanation": "{name} is a declared {kind} extracted from {technology} evidence; execution is unverified."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "detection-only",
+        "component_inventory": "unsupported",
+        "deployment_configuration": "unsupported",
+        "configured_connections": "unsupported",
+        "report_consumers": "unsupported",
+        "exact_bindings": "unsupported",
+        "architecture_views": "unsupported",
+        "workflow_walkthroughs": "unsupported"
+      }
+    },
+    {
+      "id": "builtin.spark",
+      "version": "1.0.0",
+      "technology": "spark",
+      "family": "compute",
+      "applicable_versions": [
+        "*"
+      ],
+      "positive": [
+        {
+          "kind": "python_import",
+          "category": "recognized",
+          "reason": "structural python_import signature",
+          "values": [
+            "pyspark"
+          ]
+        },
+        {
+          "kind": "dependency",
+          "category": "declared",
+          "reason": "structural dependency signature",
+          "version_kind": "client",
+          "values": [
+            "pyspark"
+          ]
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "spark",
+        "pyspark"
+      ],
+      "adapters": [],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "text",
+        "json",
+        "xml",
+        "python"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "unsupported",
+        "metadata_extraction": "unsupported",
+        "table_lineage": "unsupported",
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "schedules": "unsupported",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "No compute graph or SQL adapter.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures.",
+        "Signature implemented but not measured against labeled positive fixtures in this MVP."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [],
+      "fixtures": [],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://spark.apache.org/docs/latest/"
+      ],
+      "mapping": {
+        "concept": "spark",
+        "explanation": "{name} is a declared {kind} extracted from {technology} evidence; execution is unverified."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "detection-only",
+        "component_inventory": "unsupported",
+        "deployment_configuration": "unsupported",
+        "configured_connections": "unsupported",
+        "report_consumers": "unsupported",
+        "exact_bindings": "unsupported",
+        "architecture_views": "unsupported",
+        "workflow_walkthroughs": "unsupported"
+      }
+    },
+    {
+      "id": "builtin.databricks",
+      "version": "1.0.0",
+      "technology": "databricks",
+      "family": "compute",
+      "applicable_versions": [
+        "*"
+      ],
+      "positive": [
+        {
+          "kind": "python_import",
+          "category": "recognized",
+          "reason": "structural python_import signature",
+          "values": [
+            "databricks.sdk"
+          ]
+        },
+        {
+          "kind": "json_fields",
+          "category": "declared",
+          "reason": "structural json_fields signature",
+          "fields": {
+            "databricks_cli_version": "$present",
+            "bundle": "$object"
+          }
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "databricks"
+      ],
+      "adapters": [],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "text",
+        "json",
+        "xml",
+        "python"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "unsupported",
+        "metadata_extraction": "unsupported",
+        "table_lineage": "unsupported",
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "schedules": "unsupported",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "SDK import or bundle signature only.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures.",
+        "Signature implemented but not measured against labeled positive fixtures in this MVP."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [],
+      "fixtures": [],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://docs.databricks.com/dev-tools/bundles/"
+      ],
+      "mapping": {
+        "concept": "databricks",
+        "explanation": "{name} is a declared {kind} extracted from {technology} evidence; execution is unverified."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "detection-only",
+        "component_inventory": "unsupported",
+        "deployment_configuration": "unsupported",
+        "configured_connections": "unsupported",
+        "report_consumers": "unsupported",
+        "exact_bindings": "unsupported",
+        "architecture_views": "unsupported",
+        "workflow_walkthroughs": "unsupported"
+      }
+    },
+    {
+      "id": "builtin.kafka",
+      "version": "1.0.0",
+      "technology": "kafka",
+      "family": "messaging",
+      "applicable_versions": [
+        "*"
+      ],
+      "positive": [
+        {
+          "kind": "python_import",
+          "category": "recognized",
+          "reason": "structural python_import signature",
+          "values": [
+            "confluent_kafka",
+            "kafka"
+          ]
+        },
+        {
+          "kind": "dependency",
+          "category": "declared",
+          "reason": "structural dependency signature",
+          "version_kind": "client",
+          "values": [
+            "confluent-kafka",
+            "kafka-python"
+          ]
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "kafka"
+      ],
+      "adapters": [],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "text",
+        "json",
+        "xml",
+        "python"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "unsupported",
+        "metadata_extraction": "unsupported",
+        "table_lineage": "unsupported",
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "schedules": "unsupported",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "Client import/dependency only. No broker metadata or topic lineage.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [
+        "tests/test_acceptance.py",
+        "tests/test_core.py"
+      ],
+      "fixtures": [
+        "fixtures/legacy",
+        "fixtures/modern",
+        "fixtures/adversarial"
+      ],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://kafka.apache.org/documentation/"
+      ],
+      "mapping": {
+        "concept": "kafka",
+        "explanation": "{name} is a declared {kind} extracted from {technology} evidence; execution is unverified."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "detection-only",
+        "component_inventory": "unsupported",
+        "deployment_configuration": "unsupported",
+        "configured_connections": "unsupported",
+        "report_consumers": "unsupported",
+        "exact_bindings": "unsupported",
+        "architecture_views": "unsupported",
+        "workflow_walkthroughs": "unsupported"
+      }
+    },
+    {
+      "id": "builtin.object-storage",
+      "version": "1.0.0",
+      "technology": "object-storage",
+      "family": "storage",
+      "applicable_versions": [
+        "*"
+      ],
+      "positive": [
+        {
+          "kind": "python_import",
+          "category": "ambiguous",
+          "reason": "AWS SDK import does not establish which AWS service is used",
+          "values": [
+            "boto3"
+          ]
+        },
+        {
+          "kind": "json_fields",
+          "category": "declared",
+          "reason": "structural json_fields signature",
+          "fields": {
+            "resource_type": "s3_bucket",
+            "bucket": "$present"
+          }
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "object storage",
+        "amazon s3"
+      ],
+      "adapters": [],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "text",
+        "json",
+        "xml",
+        "python"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "unsupported",
+        "metadata_extraction": "unsupported",
+        "table_lineage": "unsupported",
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "schedules": "unsupported",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "AWS SDK candidate does not establish an S3 connection; further configuration is needed.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures.",
+        "Signature implemented but not measured against labeled positive fixtures in this MVP."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [],
+      "fixtures": [],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html"
+      ],
+      "mapping": {
+        "concept": "object-storage",
+        "explanation": "{name} is a declared {kind} extracted from {technology} evidence; execution is unverified."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "detection-only",
+        "component_inventory": "unsupported",
+        "deployment_configuration": "unsupported",
+        "configured_connections": "unsupported",
+        "report_consumers": "unsupported",
+        "exact_bindings": "unsupported",
+        "architecture_views": "unsupported",
+        "workflow_walkthroughs": "unsupported"
+      }
+    },
+    {
+      "id": "builtin.sqlserver",
+      "version": "1.0.0",
+      "technology": "sqlserver",
+      "family": "database",
+      "applicable_versions": [
+        "*"
+      ],
+      "positive": [
+        {
+          "kind": "contains_all",
+          "category": "recognized",
+          "reason": "structural contains_all signature",
+          "values": [
+            "CREATE PROCEDURE",
+            "SET NOCOUNT ON"
+          ]
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "sql server",
+        "mssql"
+      ],
+      "adapters": [],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "text",
+        "json",
+        "xml",
+        "python"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "unsupported",
+        "metadata_extraction": "unsupported",
+        "table_lineage": "unsupported",
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "schedules": "unsupported",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "T-SQL structural candidate only; no SQL Server analyzer.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures.",
+        "Signature implemented but not measured against labeled positive fixtures in this MVP."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [],
+      "fixtures": [],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://learn.microsoft.com/sql/t-sql/statements/create-procedure-transact-sql"
+      ],
+      "mapping": {
+        "concept": "sqlserver",
+        "explanation": "{name} is a declared {kind} extracted from {technology} evidence; execution is unverified."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "detection-only",
+        "component_inventory": "unsupported",
+        "deployment_configuration": "unsupported",
+        "configured_connections": "unsupported",
+        "report_consumers": "unsupported",
+        "exact_bindings": "unsupported",
+        "architecture_views": "unsupported",
+        "workflow_walkthroughs": "unsupported"
+      }
+    },
+    {
+      "id": "builtin.bigquery",
+      "version": "1.0.0",
+      "technology": "bigquery",
+      "family": "warehouse",
+      "applicable_versions": [
+        "*"
+      ],
+      "positive": [
+        {
+          "kind": "python_import",
+          "category": "recognized",
+          "reason": "structural python_import signature",
+          "values": [
+            "google.cloud.bigquery"
+          ]
+        },
+        {
+          "kind": "json_fields",
+          "category": "declared",
+          "reason": "structural json_fields signature",
+          "fields": {
+            "metadata.adapter_type": "bigquery",
+            "nodes": "$object"
+          }
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "bigquery"
+      ],
+      "adapters": [],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "text",
+        "json",
+        "xml",
+        "python"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "unsupported",
+        "metadata_extraction": "unsupported",
+        "table_lineage": "unsupported",
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "schedules": "unsupported",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "SDK/manifest declaration only; client version is not warehouse version.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures.",
+        "Signature implemented but not measured against labeled positive fixtures in this MVP."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [],
+      "fixtures": [],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://cloud.google.com/bigquery/docs"
+      ],
+      "mapping": {
+        "concept": "bigquery",
+        "explanation": "{name} is a declared {kind} extracted from {technology} evidence; execution is unverified."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "detection-only",
+        "component_inventory": "unsupported",
+        "deployment_configuration": "unsupported",
+        "configured_connections": "unsupported",
+        "report_consumers": "unsupported",
+        "exact_bindings": "unsupported",
+        "architecture_views": "unsupported",
+        "workflow_walkthroughs": "unsupported"
+      }
+    },
+    {
+      "id": "builtin.powerbi",
+      "version": "1.0.0",
+      "technology": "powerbi",
+      "family": "bi",
+      "applicable_versions": [
+        "*"
+      ],
+      "positive": [
+        {
+          "kind": "json_fields",
+          "category": "ambiguous",
+          "reason": "Tabular model candidate; Power BI versus Analysis Services unresolved",
+          "fields": {
+            "version": "$present",
+            "model.tables": "$array"
+          }
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "power bi",
+        "powerbi"
+      ],
+      "adapters": [],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "text",
+        "json",
+        "xml",
+        "python"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "unsupported",
+        "metadata_extraction": "unsupported",
+        "table_lineage": "unsupported",
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "schedules": "unsupported",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "Tabular model structural candidate only; Power BI vs Analysis Services unresolved without more metadata.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures.",
+        "Signature implemented but not measured against labeled positive fixtures in this MVP."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [],
+      "fixtures": [],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://learn.microsoft.com/power-bi/developer/projects/projects-overview"
+      ],
+      "mapping": {
+        "concept": "powerbi",
+        "explanation": "{name} is a declared {kind} extracted from {technology} evidence; execution is unverified."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "detection-only",
+        "component_inventory": "unsupported",
+        "deployment_configuration": "unsupported",
+        "configured_connections": "unsupported",
+        "report_consumers": "unsupported",
+        "exact_bindings": "unsupported",
+        "architecture_views": "unsupported",
+        "workflow_walkthroughs": "unsupported"
+      }
+    },
+    {
+      "id": "builtin.tableau",
+      "version": "1.0.0",
+      "technology": "tableau",
+      "family": "bi",
+      "applicable_versions": [
+        "*"
+      ],
+      "positive": [
+        {
+          "kind": "xml_structure",
+          "category": "recognized",
+          "reason": "structural xml_structure signature",
+          "values": [
+            "workbook",
+            "datasources"
+          ]
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "tableau"
+      ],
+      "adapters": [],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "text",
+        "json",
+        "xml",
+        "python"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "unsupported",
+        "metadata_extraction": "unsupported",
+        "table_lineage": "unsupported",
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "schedules": "unsupported",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "Workbook signature only. No Tableau datasource lineage adapter.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [
+        "tests/test_acceptance.py",
+        "tests/test_core.py"
+      ],
+      "fixtures": [
+        "fixtures/legacy",
+        "fixtures/modern",
+        "fixtures/adversarial"
+      ],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://help.tableau.com/current/api/metadata_api/en-us/"
+      ],
+      "mapping": {
+        "concept": "tableau",
+        "explanation": "{name} is a declared {kind} extracted from {technology} evidence; execution is unverified."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "detection-only",
+        "component_inventory": "unsupported",
+        "deployment_configuration": "unsupported",
+        "configured_connections": "unsupported",
+        "report_consumers": "unsupported",
+        "exact_bindings": "unsupported",
+        "architecture_views": "unsupported",
+        "workflow_walkthroughs": "unsupported"
+      }
+    },
+    {
+      "id": "builtin.environment-map",
+      "version": "1.0.0",
+      "technology": "environment-map",
+      "family": "metadata",
+      "applicable_versions": [
+        "pipeline-handbook.environment/v1"
+      ],
+      "positive": [
+        {
+          "kind": "json_fields",
+          "fields": {
+            "format": "pipeline-handbook.environment/v1",
+            "components": "$array",
+            "links": "$array"
+          },
+          "category": "declared",
+          "reason": "Versioned environment metadata export with explicit component declarations and exact bindings"
+        },
+        {
+          "kind": "contains_all",
+          "values": [
+            "\"format\"",
+            "\"pipeline-handbook.environment/"
+          ],
+          "category": "ambiguous",
+          "reason": "Environment-map format family candidate; adapter validates version/schema"
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "pipeline-handbook.environment"
+      ],
+      "adapters": [
+        "builtin:environment_map"
+      ],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "json"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "unsupported",
+        "metadata_extraction": "subset",
+        "table_lineage": "unsupported",
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "schedules": "unsupported",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "Supplied declarations only, never independent deployment/communication/runtime proof.",
+        "Exact same-environment selectors required; missing/inaccessible/excluded endpoints stay unresolved.",
+        "Generic report/form metadata only; no proprietary BI/form parser."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [
+        "tests/test_architecture_adapters.py",
+        "tests/test_architecture_acceptance.py"
+      ],
+      "fixtures": [
+        "fixtures/architecture"
+      ],
+      "maturity": "reference",
+      "official_references": [],
+      "mapping": {
+        "concept": "environment_architecture_declaration",
+        "explanation": "{name} is a declared {kind} from a versioned metadata export; runtime behavior is unverified."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "subset",
+        "component_inventory": "subset",
+        "deployment_configuration": "subset",
+        "configured_connections": "subset",
+        "report_consumers": "subset",
+        "exact_bindings": "subset",
+        "architecture_views": "subset",
+        "workflow_walkthroughs": "subset"
+      }
+    },
+    {
+      "id": "builtin.seaweedfs",
+      "version": "1.0.0",
+      "technology": "seaweedfs",
+      "family": "storage",
+      "applicable_versions": [
+        "Image declarations only; no vendor analyzer"
+      ],
+      "positive": [
+        {
+          "kind": "compose_image",
+          "values": [
+            "chrislusf/seaweedfs"
+          ],
+          "category": "declared",
+          "reason": "Product image reference in normalized Compose declaration; no live deployment or successful operation is observed",
+          "version_kind": "tool"
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "seaweedfs"
+      ],
+      "adapters": [],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "json"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "subset",
+        "metadata_extraction": "unsupported",
+        "table_lineage": "unsupported",
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "schedules": "unsupported",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "Image/dependency detection only. No native metadata, data lineage, report or runtime analyzer."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [
+        "tests/test_project_discovery.py"
+      ],
+      "fixtures": [
+        "tests/test_project_discovery.py"
+      ],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://github.com/seaweedfs/seaweedfs"
+      ],
+      "mapping": {
+        "concept": "technology_candidate",
+        "explanation": "{name} is a declared {kind}; runtime behavior is unknown."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "detection-only",
+        "component_inventory": "unsupported",
+        "deployment_configuration": "unsupported",
+        "configured_connections": "unsupported",
+        "report_consumers": "unsupported",
+        "exact_bindings": "unsupported",
+        "architecture_views": "unsupported",
+        "workflow_walkthroughs": "unsupported"
+      }
+    },
+    {
+      "id": "builtin.metabase",
+      "version": "1.0.0",
+      "technology": "metabase",
+      "family": "bi",
+      "applicable_versions": [
+        "Image declarations only; no vendor analyzer"
+      ],
+      "positive": [
+        {
+          "kind": "compose_image",
+          "values": [
+            "metabase/metabase"
+          ],
+          "category": "declared",
+          "reason": "Product image reference in normalized Compose declaration; no live deployment or successful operation is observed",
+          "version_kind": "tool"
+        }
+      ],
+      "negative": [],
+      "mention_terms": [
+        "metabase"
+      ],
+      "adapters": [],
+      "priority": 100,
+      "conflict_handling": "Keep candidates and evidence. Report incompatible declared versions within an environment/service; never silently prefer an override.",
+      "applicability": "Structural signatures in authorized local definitions/exports. Documentation mentions remain mentioned.",
+      "input_formats": [
+        "json"
+      ],
+      "prerequisites": [
+        "Explicit local directory source scope"
+      ],
+      "features": {
+        "detection": "subset",
+        "version_identification": "subset",
+        "metadata_extraction": "unsupported",
+        "table_lineage": "unsupported",
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "schedules": "unsupported",
+        "runtime_evidence": "unsupported",
+        "documentation": "subset"
+      },
+      "limitations": [
+        "Image/dependency detection only. No native metadata, data lineage, report or runtime analyzer."
+      ],
+      "access": [
+        "Local read access only; no business-row sampling"
+      ],
+      "configuration": [
+        "technologies.include/exclude/overrides",
+        "adapters.trusted/include/exclude"
+      ],
+      "tests": [
+        "tests/test_project_discovery.py"
+      ],
+      "fixtures": [
+        "tests/test_project_discovery.py"
+      ],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://www.metabase.com/docs/latest/"
+      ],
+      "mapping": {
+        "concept": "technology_candidate",
+        "explanation": "{name} is a declared {kind}; runtime behavior is unknown."
+      },
+      "architecture_features": {
+        "technology_role_evidence": "detection-only",
+        "component_inventory": "unsupported",
+        "deployment_configuration": "unsupported",
+        "configured_connections": "unsupported",
+        "report_consumers": "unsupported",
+        "exact_bindings": "unsupported",
+        "architecture_views": "unsupported",
+        "workflow_walkthroughs": "unsupported"
+      }
+    }
+  ]
+}

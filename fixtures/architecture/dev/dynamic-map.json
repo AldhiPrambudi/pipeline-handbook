@@ -1,0 +1,28 @@
+{
+  "format": "pipeline-handbook.environment/v1",
+  "components": [],
+  "links": [
+    {
+      "source": {
+        "kind": "component",
+        "name": "reporting.portal",
+        "environment": "dev",
+        "namespace": "arch_dev",
+        "source_id": "arch_dev",
+        "artifact_path": "{{runtime_export}}.json"
+      },
+      "target": {
+        "kind": "component",
+        "name": "warehouse.orders",
+        "environment": "dev",
+        "namespace": "arch_dev",
+        "source_id": "arch_dev",
+        "artifact_path": "environment-map.json"
+      },
+      "kind": "connection",
+      "attributes": {
+        "relation": "unresolved dynamic metadata reference"
+      }
+    }
+  ]
+}

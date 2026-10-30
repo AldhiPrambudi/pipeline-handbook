@@ -1,0 +1,10 @@
+{
+  "project": "pipeline_handbook_hybrid",
+  "discovery": {"mode": "hybrid"},
+  "sources": [{"id": "legacy_dev", "kind": "directory", "environment": "dev", "service": "legacy_orders", "path": "../fixtures/legacy/dev"}],
+  "technologies": {"include": ["*"], "exclude": ["docker"], "overrides": {"postgresql": {"dialect": "postgres", "version": "16.4"}}},
+  "rules": {"directories": ["../rules"]},
+  "adapters": {"trusted": ["builtin:*"]},
+  "security": {"network_enabled": false, "allowed_endpoints": []},
+  "output": {"directory": "../generated_hybrid", "formats": ["markdown", "html", "json"]}
+}

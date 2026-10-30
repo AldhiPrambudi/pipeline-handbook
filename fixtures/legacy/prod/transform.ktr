@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info><name>stage_orders</name><description>Synthetic definition-only portfolio fixture</description></info>
+  <connection>
+    <name>orders_local</name><type>POSTGRESQL</type><access>Native</access>
+    <server>localhost</server><database>orders_demo</database><port>5432</port>
+    <username>demo_reader</username><password>FAKE_PASSWORD_CANARY_938172</password>
+  </connection>
+  <step><name>Read raw orders</name><type>TableInput</type><connection>orders_local</connection>
+    <sql>SELECT order_id, amount FROM raw.orders</sql>
+  </step>
+  <step><name>Write staging orders</name><type>TableOutput</type><connection>orders_local</connection>
+    <schema>staging</schema><table>orders</table><truncate>N</truncate>
+    <specify_fields>Y</specify_fields><fields>
+      <field><column_name>order_id</column_name><stream_name>order_id</stream_name></field>
+      <field><column_name>amount</column_name><stream_name>amount</stream_name></field>
+    </fields>
+  </step>
+  <order><hop><from>Read raw orders</from><to>Write staging orders</to><enabled>Y</enabled></hop></order>
+</transformation>

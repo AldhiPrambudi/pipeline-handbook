@@ -1,0 +1,13 @@
+{
+  "format": "pipeline-handbook.environment/v1",
+  "components": [
+    {
+      "name": "warehouse.orders",
+      "technology": "snowflake",
+      "role": "Declared analytical dataset service",
+      "boundary": "Analytics boundary",
+      "location": "synthetic://dev/contradictory-warehouse"
+    }
+  ],
+  "links": []
+}

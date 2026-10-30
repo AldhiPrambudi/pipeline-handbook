@@ -1,0 +1,304 @@
+{
+  "scope": "Manually labeled synthetic fixture assertions; detection measurements cover only the explicitly labeled pairs below, not universal accuracy.",
+  "detection": {
+    "labeled_pairs": 17,
+    "presence_accuracy": 1.0,
+    "category_accuracy": 1.0,
+    "by_technology": {
+      "pentaho": {
+        "tp": 1,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0,
+        "labeled_pairs": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "accuracy": 1.0
+      },
+      "postgresql": {
+        "tp": 3,
+        "tn": 1,
+        "fp": 0,
+        "fn": 0,
+        "labeled_pairs": 4,
+        "precision": 1.0,
+        "recall": 1.0,
+        "accuracy": 1.0
+      },
+      "shell": {
+        "tp": 1,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0,
+        "labeled_pairs": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "accuracy": 1.0
+      },
+      "docker": {
+        "tp": 1,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0,
+        "labeled_pairs": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "accuracy": 1.0
+      },
+      "kafka": {
+        "tp": 1,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0,
+        "labeled_pairs": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "accuracy": 1.0
+      },
+      "tableau": {
+        "tp": 1,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0,
+        "labeled_pairs": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "accuracy": 1.0
+      },
+      "airflow": {
+        "tp": 2,
+        "tn": 2,
+        "fp": 0,
+        "fn": 0,
+        "labeled_pairs": 4,
+        "precision": 1.0,
+        "recall": 1.0,
+        "accuracy": 1.0
+      },
+      "dbt": {
+        "tp": 3,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0,
+        "labeled_pairs": 3,
+        "precision": 1.0,
+        "recall": 1.0,
+        "accuracy": 1.0
+      },
+      "snowflake": {
+        "tp": 1,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0,
+        "labeled_pairs": 1,
+        "precision": 1.0,
+        "recall": 1.0,
+        "accuracy": 1.0
+      }
+    },
+    "results": [
+      {
+        "source": "legacy_dev",
+        "path": "transform.ktr",
+        "technology": "pentaho",
+        "present": true,
+        "category": "recognized",
+        "detected": true,
+        "presence_correct": true,
+        "category_correct": true
+      },
+      {
+        "source": "legacy_dev",
+        "path": "transform.ktr",
+        "technology": "postgresql",
+        "present": true,
+        "category": "recognized",
+        "detected": true,
+        "presence_correct": true,
+        "category_correct": true
+      },
+      {
+        "source": "legacy_dev",
+        "path": "publish.sh",
+        "technology": "shell",
+        "present": true,
+        "category": "recognized",
+        "detected": true,
+        "presence_correct": true,
+        "category_correct": true
+      },
+      {
+        "source": "legacy_dev",
+        "path": "publish.sql",
+        "technology": "postgresql",
+        "present": true,
+        "category": "recognized",
+        "detected": true,
+        "presence_correct": true,
+        "category_correct": true
+      },
+      {
+        "source": "legacy_dev",
+        "path": "Dockerfile",
+        "technology": "docker",
+        "present": true,
+        "category": "declared",
+        "detected": true,
+        "presence_correct": true,
+        "category_correct": true
+      },
+      {
+        "source": "legacy_dev",
+        "path": "Dockerfile",
+        "technology": "postgresql",
+        "present": true,
+        "category": "declared",
+        "detected": true,
+        "presence_correct": true,
+        "category_correct": true
+      },
+      {
+        "source": "legacy_dev",
+        "path": "README.md",
+        "technology": "kafka",
+        "present": true,
+        "category": "mentioned",
+        "detected": true,
+        "presence_correct": true,
+        "category_correct": true
+      },
+      {
+        "source": "legacy_dev",
+        "path": "README.md",
+        "technology": "tableau",
+        "present": true,
+        "category": "mentioned",
+        "detected": true,
+        "presence_correct": true,
+        "category_correct": true
+      },
+      {
+        "source": "modern_dev",
+        "path": "dag.py",
+        "technology": "airflow",
+        "present": true,
+        "category": "recognized",
+        "detected": true,
+        "presence_correct": true,
+        "category_correct": true
+      },
+      {
+        "source": "modern_dev",
+        "path": "requirements.txt",
+        "technology": "airflow",
+        "present": true,
+        "category": "declared",
+        "detected": true,
+        "presence_correct": true,
+        "category_correct": true
+      },
+      {
+        "source": "modern_dev",
+        "path": "requirements.txt",
+        "technology": "dbt",
+        "present": true,
+        "category": "declared",
+        "detected": true,
+        "presence_correct": true,
+        "category_correct": true
+      },
+      {
+        "source": "modern_dev",
+        "path": "manifest.json",
+        "technology": "dbt",
+        "present": true,
+        "category": "recognized",
+        "detected": true,
+        "presence_correct": true,
+        "category_correct": true
+      },
+      {
+        "source": "modern_dev",
+        "path": "manifest.json",
+        "technology": "snowflake",
+        "present": true,
+        "category": "declared",
+        "detected": true,
+        "presence_correct": true,
+        "category_correct": true
+      },
+      {
+        "source": "adversarial",
+        "path": "airflow.py",
+        "technology": "airflow",
+        "present": false,
+        "detected": false,
+        "presence_correct": true,
+        "category_correct": true
+      },
+      {
+        "source": "adversarial",
+        "path": "ambiguous.sql",
+        "technology": "postgresql",
+        "present": false,
+        "detected": false,
+        "presence_correct": true,
+        "category_correct": true
+      },
+      {
+        "source": "adversarial",
+        "path": "unknown.workflow",
+        "technology": "airflow",
+        "present": false,
+        "detected": false,
+        "presence_correct": true,
+        "category_correct": true
+      },
+      {
+        "source": "adversarial",
+        "path": "dbt-v11.json",
+        "technology": "dbt",
+        "present": true,
+        "category": "recognized",
+        "detected": true,
+        "presence_correct": true,
+        "category_correct": true
+      }
+    ]
+  },
+  "dataset_graph": {
+    "expected_edges": 6,
+    "actual_edges": 6,
+    "correct_edges": 6,
+    "precision": 1.0,
+    "recall": 1.0,
+    "unexpected": [],
+    "missing": []
+  },
+  "limitations": [
+    "Synthetic offline definitions only; no vendor execution or live connector was measured.",
+    "Detection accuracy covers only explicitly labeled technology/artifact pairs, including three negatives.",
+    "Graph metrics cover direct dataset edges in the documented subset, not dynamic or proprietary workflows.",
+    "One measured scan is descriptive; it is not a scalability or production performance guarantee."
+  ],
+  "measured_at": "2026-10-29T12:05:51.770269+00:00",
+  "snapshot_id": "f3dc71e7b8ba5084f8f296b6",
+  "measurement": {
+    "command": "python3 -m pipeline_handbook analyze --config configs/demo.json",
+    "python": "3.13.1",
+    "platform": "Darwin",
+    "elapsed_seconds_including_cli_startup": 1.107144,
+    "peak_child_rss_bytes": 31604736,
+    "artifact_count": 25,
+    "inventoried_bytes": 11600,
+    "core_metrics": {
+      "adapter_failures": 0,
+      "adapter_runs": 12,
+      "elapsed_seconds": 0.970443,
+      "extraction_cache": "disabled; every input is rehashed and reparsed",
+      "files": 25,
+      "input_bytes": 11600,
+      "resource_isolation": "spawned workers; wall time + platform-supported CPU/address-space limits"
+    }
+  }
+}

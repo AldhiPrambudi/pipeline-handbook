@@ -1,0 +1,53 @@
+{
+  "config_sha256": "3d52dc14451864fedc09cdd3b10aca075eb47a38087338d41608c97c1ddd0ed4",
+  "profile": "pipeline_handbook_architecture_recovery",
+  "schema_version": "1",
+  "sources": {
+    "adversarial": {
+      "PROMPT.md": "142f9ea22bade245be553119b917a34f5b71acce6c4052aa64e7191d088c2383",
+      "airflow.py": "9106327776fe26954e88aad7da0b7070249d6e622868d7efea90d2db2b028519",
+      "ambiguous.sql": "df81d7b2738bcb775dd99077714bc31c5f55f1edfedb4cc0e479ddaceefabb9d",
+      "dbt-v11.json": "e0c11acf5e11e9fe33186d2b08882eced029a06fe4a6286cf91f83839dbabb38",
+      "hostile.py": "de2fdf2c1e1a9d6cc731c32c0f8be66dc15c0873bbc5fbb2efbe3bde6a73dd76",
+      "secrets.json": "fe56b9af5ee5229e9634497f8fad5c9bcfc88c2c09e1620525255ae1888567d3",
+      "unknown.workflow": "4e72f0c924e21c3bdfab9f912249d6a615c4dc3cce625cf8b6683b63282fe848",
+      "unsafe.ktr": "9c523c3ec4dd9458c3b2a39640d676a549a138b45a2946417a55111208ae26d8"
+    },
+    "arch_dev": {
+      "compose-misleading.json": "ec964b0d8d021bfd30a761b07b8281050ce22c9c64e6dc075e7eff6dc264f215",
+      "compose.json": "699fb2f4cb6b24b16a27ceb2c7548fb528b41003d97a0ecdf343711572a23eca",
+      "dynamic-map.json": "65703bc88f059c3c28ef6569763bd6a7c5c9d30cd83858b2a784e88dbfda594f",
+      "environment-conflict.json": "9f00a27d4526c3be42d791c594934168ade9fa6c5b5cbe8247df833bda3dda15",
+      "environment-map.json": "23b6986935f8656dc7221c3670e461b0685ce54c92aba7e016022f4a2389a662",
+      "future-map.json": "7f7094bdf509fc12f279e3b65ed3df8aa3fd9cd5139a3fa9e282efe303722a07",
+      "malformed-map.json": "5a025670e9d693294f581011aba9afb5e8474fe274fad2475333aeda906c4f1e"
+    },
+    "arch_prod": {
+      "compose.json": "699fb2f4cb6b24b16a27ceb2c7548fb528b41003d97a0ecdf343711572a23eca",
+      "environment-map.json": "5efd827d8fe151c945ba5ad4549bdd54431c170b34542ca0e8cbc6a5f74f293f"
+    },
+    "legacy_dev": {
+      "Dockerfile": "68466988f9b2c71d4c0864f099ab641da2a460b2e200f66261c3796ed4d763e5",
+      "README.md": "3fab6936856a9fb9baf580b527e665a8436ae10264370e5dcd00c743e4c069d8",
+      "dynamic.sql": "27f92ccc6adfb3899a0f6c4f2b1af196e9e8a25acb98a76e1ce6adf8588a34d4",
+      "load.kjb": "4e488797154e685644e008a2b879ca8c3ccb4623c4372f8a1706f5cc0c471d2e",
+      "postgres-metadata.json": "4b576bf0613843c334f6f67dfd674e87d04eeefe8720e7d2fd05e628f6b32bca",
+      "publish.sh": "e17cd036075fe2c717e0426ebfa06c13a406613a8ea92db41bc09e3ba111cfa6",
+      "publish.sql": "d80113c92f0f2b62c440c008d2df7a575185a94216e352bf6518e5a38942ed2f",
+      "schedule.cron": "eed87b3025afe87d594928ce84ff09aa5a6c2d1eda4c3323caaa6effd52b0b18",
+      "transform.ktr": "55959ca630079a6c4caf0d9f9bef4a2dfba4c6fce3618f756177198e51d717b8"
+    },
+    "legacy_prod": {
+      "README.md": "c50ddd48a7986f3293eab1f39d2982302c38f71345164abc57be25a593e7f36f",
+      "publish.sql": "d80113c92f0f2b62c440c008d2df7a575185a94216e352bf6518e5a38942ed2f",
+      "transform.ktr": "55959ca630079a6c4caf0d9f9bef4a2dfba4c6fce3618f756177198e51d717b8"
+    },
+    "modern_dev": {
+      "README.md": "2458388259b04c3c2a8fc57b9fa7b0b278c75ab47b503805b46bc76058df82a1",
+      "dag.py": "fe5f816b86c8e46364c02a448c1fc325bdd2ecae0feb8780ad2c29f8b06fec65",
+      "dynamic_dag.py": "3c48f1535773dee8f7eee2b3a2e4b0a443489844893f5a93988561a9f2e23ad6",
+      "manifest.json": "f7eb0b3ece365e964577ba4eef4e9786f43e4d4856d35ce04d2ffbc9f43d714a",
+      "requirements.txt": "b903f65a2c87f2693d81154d32304ece7d1b3c029dc21cb17b1868ec506b320d"
+    }
+  }
+}

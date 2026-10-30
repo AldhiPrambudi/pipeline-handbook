@@ -1,0 +1,19 @@
+{
+  "verification_date": "2026-10-29",
+  "python": "3.13.1",
+  "sqlite": "3.50.3",
+  "platform": "Darwin",
+  "test_command": "python3 -m unittest discover -s tests -v",
+  "tests_passed": 65,
+  "test_elapsed_seconds": 13.019,
+  "snapshot_id": "f3dc71e7b8ba5084f8f296b6",
+  "clean_copied_checkout": "passed; same semantic snapshot, all outputs and SQLite produced without dependencies",
+  "internal_html_links": 237,
+  "all_internal_html_links_resolve": true,
+  "scoped_detection_labels_correct": 17,
+  "direct_dataset_edges_correct": 6,
+  "coverage_findings": 17,
+  "vendor_execution": "not performed; fixtures definition-only",
+  "html_visual_qa": "Headless Chrome rendered the final local HTML; 1440x1100 orientation/navigation viewport reviewed. Preview: docs/handbook-preview.png.",
+  "definition_freshness_check": "status reported current; registry/configuration and file hashes match latest snapshot. This does not establish runtime freshness."
+}

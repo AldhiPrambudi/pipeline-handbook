@@ -1,0 +1,233 @@
+{
+  "format": "pipeline-handbook.environment/v1",
+  "components": [
+    {
+      "name": "host.prod.local",
+      "resource_type": "deployment_resource",
+      "role": "Declared synthetic deployment location",
+      "boundary": "Local demonstration host",
+      "location": "synthetic://prod/lab-node-01",
+      "inspection_points": [
+        {
+          "kind": "definition",
+          "location": "arch_prod/compose.json"
+        }
+      ]
+    },
+    {
+      "name": "warehouse.orders",
+      "technology": "snowflake",
+      "role": "Declared analytical dataset service",
+      "boundary": "Analytics boundary",
+      "location": "metadata-export://synthetic/prod/warehouse"
+    },
+    {
+      "name": "reporting.portal",
+      "technology": "synthetic-application",
+      "role": "Declared report and form consumer",
+      "boundary": "Consumer boundary",
+      "location": "synthetic://prod/portal",
+      "inspection_points": [
+        {
+          "kind": "definition",
+          "location": "arch_prod/environment-map.json"
+        }
+      ]
+    }
+  ],
+  "reports": [
+    {
+      "name": "orders.summary",
+      "report_type": "dashboard",
+      "technology": "synthetic-dashboard",
+      "inspection_points": [
+        {
+          "kind": "definition",
+          "location": "synthetic://prod/reports/orders-summary"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "source": {
+        "kind": "component",
+        "name": "compose.json::orders-platform::postgres",
+        "environment": "prod",
+        "namespace": "arch_prod",
+        "source_id": "arch_prod",
+        "artifact_path": "compose.json"
+      },
+      "target": {
+        "kind": "deployment_resource",
+        "name": "host.prod.local",
+        "environment": "prod",
+        "namespace": "arch_prod",
+        "source_id": "arch_prod",
+        "artifact_path": "environment-map.json"
+      },
+      "kind": "deployment",
+      "attributes": {
+        "relation": "declared placement on supplied synthetic host"
+      }
+    },
+    {
+      "source": {
+        "kind": "component",
+        "name": "compose.json::orders-platform::airflow",
+        "environment": "prod",
+        "namespace": "arch_prod",
+        "source_id": "arch_prod",
+        "artifact_path": "compose.json"
+      },
+      "target": {
+        "kind": "deployment_resource",
+        "name": "host.prod.local",
+        "environment": "prod",
+        "namespace": "arch_prod",
+        "source_id": "arch_prod",
+        "artifact_path": "environment-map.json"
+      },
+      "kind": "deployment",
+      "attributes": {
+        "relation": "declared placement on supplied synthetic host"
+      }
+    },
+    {
+      "source": {
+        "kind": "component",
+        "name": "compose.json::orders-platform::dbt",
+        "environment": "prod",
+        "namespace": "arch_prod",
+        "source_id": "arch_prod",
+        "artifact_path": "compose.json"
+      },
+      "target": {
+        "kind": "deployment_resource",
+        "name": "host.prod.local",
+        "environment": "prod",
+        "namespace": "arch_prod",
+        "source_id": "arch_prod",
+        "artifact_path": "environment-map.json"
+      },
+      "kind": "deployment",
+      "attributes": {
+        "relation": "declared placement on supplied synthetic host"
+      }
+    },
+    {
+      "source": {
+        "kind": "component",
+        "name": "reporting.portal",
+        "environment": "prod",
+        "namespace": "arch_prod",
+        "source_id": "arch_prod",
+        "artifact_path": "environment-map.json"
+      },
+      "target": {
+        "kind": "deployment_resource",
+        "name": "host.prod.local",
+        "environment": "prod",
+        "namespace": "arch_prod",
+        "source_id": "arch_prod",
+        "artifact_path": "environment-map.json"
+      },
+      "kind": "deployment",
+      "attributes": {
+        "relation": "declared application placement"
+      }
+    },
+    {
+      "source": {
+        "kind": "component",
+        "name": "compose.json::orders-platform::airflow",
+        "environment": "prod",
+        "namespace": "arch_prod",
+        "source_id": "arch_prod",
+        "artifact_path": "compose.json"
+      },
+      "target": {
+        "kind": "component",
+        "name": "compose.json::orders-platform::postgres",
+        "environment": "prod",
+        "namespace": "arch_prod",
+        "source_id": "arch_prod",
+        "artifact_path": "compose.json"
+      },
+      "kind": "connection",
+      "attributes": {
+        "relation": "declared scheduler metadata connection",
+        "protocol": "postgresql"
+      }
+    },
+    {
+      "source": {
+        "kind": "component",
+        "name": "reporting.portal",
+        "environment": "prod",
+        "namespace": "arch_prod",
+        "source_id": "arch_prod",
+        "artifact_path": "environment-map.json"
+      },
+      "target": {
+        "kind": "component",
+        "name": "warehouse.orders",
+        "environment": "prod",
+        "namespace": "arch_prod",
+        "source_id": "arch_prod",
+        "artifact_path": "environment-map.json"
+      },
+      "kind": "connection",
+      "attributes": {
+        "relation": "declared analytical query connection",
+        "protocol": "sql",
+        "read_only": true
+      }
+    },
+    {
+      "source": {
+        "kind": "dataset",
+        "name": "final.orders",
+        "environment": "prod",
+        "namespace": "legacy_orders",
+        "source_id": "legacy_prod",
+        "artifact_path": "publish.sql"
+      },
+      "target": {
+        "kind": "report",
+        "name": "orders.summary",
+        "environment": "prod",
+        "namespace": "arch_prod",
+        "source_id": "arch_prod",
+        "artifact_path": "environment-map.json"
+      },
+      "kind": "data_flow",
+      "attributes": {
+        "relation": "declared production-labeled dashboard dataset consumption",
+        "read_only": true
+      }
+    },
+    {
+      "source": {
+        "kind": "dataset",
+        "name": "DEMO.FINAL.ORDERS",
+        "environment": "dev",
+        "namespace": "analytics_warehouse",
+        "source_id": "modern_dev",
+        "artifact_path": "manifest.json"
+      },
+      "target": {
+        "kind": "report",
+        "name": "orders.summary",
+        "environment": "prod",
+        "namespace": "arch_prod",
+        "source_id": "arch_prod",
+        "artifact_path": "environment-map.json"
+      },
+      "kind": "data_flow",
+      "attributes": {
+        "relation": "deliberately invalid cross-environment assertion"
+      }
+    }
+  ]
+}

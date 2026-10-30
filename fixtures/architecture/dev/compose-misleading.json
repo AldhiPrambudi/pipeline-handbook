@@ -1,0 +1,7 @@
+{
+  "design_note": "A Docker Compose deployment might exist.",
+  "service_names": [
+    "airflow",
+    "postgres"
+  ]
+}

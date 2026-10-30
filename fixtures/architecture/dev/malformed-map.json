@@ -1,0 +1,10 @@
+{
+  "format": "pipeline-handbook.environment/v1",
+  "components": [
+    {
+      "name": "malformed.should.not.exist",
+      "command": "never execute supplied metadata"
+    }
+  ],
+  "links": []
+}

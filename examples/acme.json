@@ -1,0 +1,10 @@
+{
+  "project": "trusted_adapter_extension_demo",
+  "sources": [{"id": "acme_demo", "kind": "directory", "environment": "demo", "service": "acme_orders", "path": "../.demo-data/acme-input"}],
+  "rules": {"directories": ["./trusted_plugins"]},
+  "adapters": {
+    "trusted": ["builtin:*", "example:acme"],
+    "plugins": [{"id": "example:acme", "path": "./trusted_plugins/acme.py", "version": "1.0.0", "technologies": ["acme"], "priority": 150}]
+  },
+  "output": {"directory": "../generated_acme", "formats": ["markdown", "html", "json"]}
+}

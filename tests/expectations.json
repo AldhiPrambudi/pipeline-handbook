@@ -1,0 +1,37 @@
+{
+  "description": "Manually labeled synthetic fixture assertions; detection measurements cover only the explicitly labeled pairs below, not universal accuracy.",
+  "detection_labels": [
+    {"source": "legacy_dev", "path": "transform.ktr", "technology": "pentaho", "present": true, "category": "recognized"},
+    {"source": "legacy_dev", "path": "transform.ktr", "technology": "postgresql", "present": true, "category": "recognized"},
+    {"source": "legacy_dev", "path": "publish.sh", "technology": "shell", "present": true, "category": "recognized"},
+    {"source": "legacy_dev", "path": "publish.sql", "technology": "postgresql", "present": true, "category": "recognized"},
+    {"source": "legacy_dev", "path": "Dockerfile", "technology": "docker", "present": true, "category": "declared"},
+    {"source": "legacy_dev", "path": "Dockerfile", "technology": "postgresql", "present": true, "category": "declared"},
+    {"source": "legacy_dev", "path": "README.md", "technology": "kafka", "present": true, "category": "mentioned"},
+    {"source": "legacy_dev", "path": "README.md", "technology": "tableau", "present": true, "category": "mentioned"},
+    {"source": "modern_dev", "path": "dag.py", "technology": "airflow", "present": true, "category": "recognized"},
+    {"source": "modern_dev", "path": "requirements.txt", "technology": "airflow", "present": true, "category": "declared"},
+    {"source": "modern_dev", "path": "requirements.txt", "technology": "dbt", "present": true, "category": "declared"},
+    {"source": "modern_dev", "path": "manifest.json", "technology": "dbt", "present": true, "category": "recognized"},
+    {"source": "modern_dev", "path": "manifest.json", "technology": "snowflake", "present": true, "category": "declared"},
+    {"source": "adversarial", "path": "airflow.py", "technology": "airflow", "present": false},
+    {"source": "adversarial", "path": "ambiguous.sql", "technology": "postgresql", "present": false},
+    {"source": "adversarial", "path": "unknown.workflow", "technology": "airflow", "present": false},
+    {"source": "adversarial", "path": "dbt-v11.json", "technology": "dbt", "present": true, "category": "recognized"}
+  ],
+  "dataset_edges": [
+    {"environment": "dev", "namespace": "legacy_orders", "source": "raw.orders", "target": "staging.orders"},
+    {"environment": "dev", "namespace": "legacy_orders", "source": "staging.orders", "target": "final.orders"},
+    {"environment": "prod", "namespace": "legacy_orders", "source": "raw.orders", "target": "staging.orders"},
+    {"environment": "prod", "namespace": "legacy_orders", "source": "staging.orders", "target": "final.orders"},
+    {"environment": "dev", "namespace": "analytics_warehouse", "source": "DEMO.RAW.ORDERS", "target": "DEMO.STAGING.ORDERS"},
+    {"environment": "dev", "namespace": "analytics_warehouse", "source": "DEMO.STAGING.ORDERS", "target": "DEMO.FINAL.ORDERS"}
+  ],
+  "new_joiner_answers": [
+    {"question": "Which legacy dataset feeds final.orders?", "answer": "staging.orders", "evidence_path": "publish.sql"},
+    {"question": "Where is the legacy raw-to-staging definition?", "answer": "transform.ktr", "evidence_path": "transform.ktr"},
+    {"question": "Which modern source feeds the final model?", "answer": "DEMO.RAW.ORDERS", "evidence_path": "manifest.json"},
+    {"question": "Which file contains the scheduler definition?", "answer": "schedule.cron", "evidence_path": "schedule.cron"},
+    {"question": "Can these exports prove successful execution?", "answer": "No. Definitions are declared evidence; no runtime observation exists.", "evidence_path": null}
+  ]
+}

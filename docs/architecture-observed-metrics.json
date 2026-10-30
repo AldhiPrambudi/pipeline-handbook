@@ -1,0 +1,132 @@
+{
+  "scope": "Independent manual labels for synthetic architecture declarations; no real deployment, communication, execution or universal accuracy is asserted.",
+  "passed": true,
+  "graph_metrics": {
+    "explicit_components_resources_consumers": {
+      "expected": 20,
+      "actual": 20,
+      "correct": 20,
+      "precision": 1.0,
+      "recall": 1.0,
+      "unexpected": [],
+      "missing": []
+    },
+    "explicit_connections": {
+      "expected": 5,
+      "actual": 5,
+      "correct": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "unexpected": [],
+      "missing": []
+    },
+    "declared_host_placements": {
+      "expected": 8,
+      "actual": 8,
+      "correct": 8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "unexpected": [],
+      "missing": []
+    },
+    "startup_declarations": {
+      "expected": 4,
+      "actual": 4,
+      "correct": 4,
+      "precision": 1.0,
+      "recall": 1.0,
+      "unexpected": [],
+      "missing": []
+    },
+    "exact_task_model_bindings": {
+      "expected": 2,
+      "actual": 2,
+      "correct": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "unexpected": [],
+      "missing": []
+    }
+  },
+  "new_joiner_walkthroughs": {
+    "tested": 3,
+    "passed": 3,
+    "results": [
+      {
+        "report": "orders.summary",
+        "environment": "dev",
+        "checks": {
+          "unique_output_walkthrough": true,
+          "dataset_ancestry": true,
+          "environment_service_identity": true,
+          "producing_definitions": true,
+          "dependency_order_is_not_execution_sequence": true,
+          "evidence_locations": true,
+          "schedule_definition": true
+        },
+        "passed": true
+      },
+      {
+        "report": "orders.review_form",
+        "environment": "dev",
+        "checks": {
+          "unique_output_walkthrough": true,
+          "dataset_ancestry": true,
+          "environment_service_identity": true,
+          "producing_definitions": true,
+          "dependency_order_is_not_execution_sequence": true,
+          "evidence_locations": true,
+          "schedule_definition": true,
+          "control_condition": true
+        },
+        "passed": true
+      },
+      {
+        "report": "orders.summary",
+        "environment": "prod",
+        "checks": {
+          "unique_output_walkthrough": true,
+          "dataset_ancestry": true,
+          "environment_service_identity": true,
+          "producing_definitions": true,
+          "dependency_order_is_not_execution_sequence": true,
+          "evidence_locations": true
+        },
+        "passed": true
+      }
+    ]
+  },
+  "negative_evidence_checks": {
+    "required_conflict_and_unresolved_findings": true,
+    "missing_unsupported_and_malformed_assets_not_manufactured": true,
+    "no_cross_environment_edges": true,
+    "no_static_definition_promoted_to_observed_run": true,
+    "no_unsupported_target_architecture_recommendations": true
+  },
+  "limitations": [
+    "Synthetic offline declarations only; placement and connection edges do not prove deployment or successful communication.",
+    "Metrics cover only the manually labeled architecture subset and report/form questions in tests/architecture_expectations.json.",
+    "Runtime-generated graphs, proprietary application/report parsers and live metadata APIs were not measured.",
+    "A declared inspection point is a location to review, not authorization to access or execute it."
+  ],
+  "measured_at": "2026-10-30T00:59:42.552974+00:00",
+  "snapshot_id": "ad517b6dbe554bcefacb271b",
+  "measurement": {
+    "mode": "one CLI document scan including startup and rendering",
+    "elapsed_seconds": 1.699491,
+    "peak_child_rss_bytes": 38567936,
+    "python": "3.13.1",
+    "platform": "Darwin",
+    "artifact_count": 34,
+    "inventoried_bytes": 31083,
+    "core_metrics": {
+      "adapter_failures": 0,
+      "adapter_runs": 20,
+      "elapsed_seconds": 1.453598,
+      "extraction_cache": "disabled; every input is rehashed and reparsed",
+      "files": 34,
+      "input_bytes": 31083,
+      "resource_isolation": "spawned workers; wall time + platform-supported CPU/address-space limits"
+    }
+  }
+}

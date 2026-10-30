@@ -1,0 +1,10 @@
+{
+  "technology": "postgresql",
+  "server_version": "16.4",
+  "metadata_kind": "export",
+  "collected_at": "2026-01-15T00:00:00Z",
+  "environment": "dev",
+  "service": "legacy_orders",
+  "database": "orders_demo",
+  "comment": "Synthetic metadata export; no live connection was made."
+}

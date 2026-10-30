@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<!DOCTYPE transformation [<!ENTITY forbidden SYSTEM "file:///etc/passwd">]>
+<transformation><info><name>&forbidden;</name></info></transformation>

@@ -1,0 +1,3 @@
+# Synthetic per-user crontab definition; timezone is not declared.
+# handbook: working-directory=.
+0 2 * * * sh publish.sh

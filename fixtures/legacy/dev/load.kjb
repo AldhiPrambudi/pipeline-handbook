@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job>
+  <name>orders_nightly</name>
+  <description>Synthetic definition-only job; no run export exists.</description>
+  <entries>
+    <entry><name>START</name><type>SPECIAL</type><start>Y</start></entry>
+    <entry><name>Stage orders</name><type>TRANS</type><filename>${Internal.Entry.Current.Directory}/transform.ktr</filename><wait_until_finished>Y</wait_until_finished></entry>
+    <entry><name>Publish orders</name><type>SHELL</type><filename>${Internal.Entry.Current.Directory}/publish.sh</filename></entry>
+  </entries>
+  <hops>
+    <hop><from>START</from><to>Stage orders</to><enabled>Y</enabled><unconditional>Y</unconditional><evaluation>Y</evaluation></hop>
+    <hop><from>Stage orders</from><to>Publish orders</to><enabled>Y</enabled><unconditional>N</unconditional><evaluation>Y</evaluation></hop>
+  </hops>
+</job>

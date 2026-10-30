@@ -1,0 +1,3751 @@
+{
+  "annotations": [],
+  "artifacts": [
+    {
+      "environment": "dev",
+      "format": "dockerfile",
+      "hash": "68466988f9b2c71d4c0864f099ab641da2a460b2e200f66261c3796ed4d763e5",
+      "id": "artifact:ed5ab0de7efbe10f833a31d6",
+      "inspection": "static-definition",
+      "path": "Dockerfile",
+      "service": "legacy_orders",
+      "size": 94,
+      "source_id": "legacy_dev"
+    },
+    {
+      "environment": "dev",
+      "format": "md",
+      "hash": "3fab6936856a9fb9baf580b527e665a8436ae10264370e5dcd00c743e4c069d8",
+      "id": "artifact:38d6298ed7c9b42cca863027",
+      "inspection": "static-definition",
+      "path": "README.md",
+      "service": "legacy_orders",
+      "size": 1425,
+      "source_id": "legacy_dev"
+    },
+    {
+      "environment": "dev",
+      "format": "sql",
+      "hash": "27f92ccc6adfb3899a0f6c4f2b1af196e9e8a25acb98a76e1ce6adf8588a34d4",
+      "id": "artifact:a15ba90f743d1408abe73c42",
+      "inspection": "static-definition",
+      "path": "dynamic.sql",
+      "service": "legacy_orders",
+      "size": 100,
+      "source_id": "legacy_dev"
+    },
+    {
+      "environment": "dev",
+      "format": "kjb",
+      "hash": "4e488797154e685644e008a2b879ca8c3ccb4623c4372f8a1706f5cc0c471d2e",
+      "id": "artifact:70ce12b23f23cb306ab75237",
+      "inspection": "static-definition",
+      "path": "load.kjb",
+      "service": "legacy_orders",
+      "size": 866,
+      "source_id": "legacy_dev"
+    },
+    {
+      "environment": "dev",
+      "format": "json",
+      "hash": "4b576bf0613843c334f6f67dfd674e87d04eeefe8720e7d2fd05e628f6b32bca",
+      "id": "artifact:411e72b59020aa1c019c0594",
+      "inspection": "static-definition",
+      "path": "postgres-metadata.json",
+      "service": "legacy_orders",
+      "size": 287,
+      "source_id": "legacy_dev"
+    },
+    {
+      "environment": "dev",
+      "format": "sh",
+      "hash": "e17cd036075fe2c717e0426ebfa06c13a406613a8ea92db41bc09e3ba111cfa6",
+      "id": "artifact:2238155e1e0f5ef4d019bb3f",
+      "inspection": "static-definition",
+      "path": "publish.sh",
+      "service": "legacy_orders",
+      "size": 130,
+      "source_id": "legacy_dev"
+    },
+    {
+      "environment": "dev",
+      "format": "sql",
+      "hash": "d80113c92f0f2b62c440c008d2df7a575185a94216e352bf6518e5a38942ed2f",
+      "id": "artifact:59892a897910f3cdd8e4b40f",
+      "inspection": "static-definition",
+      "path": "publish.sql",
+      "service": "legacy_orders",
+      "size": 175,
+      "source_id": "legacy_dev"
+    },
+    {
+      "environment": "dev",
+      "format": "cron",
+      "hash": "eed87b3025afe87d594928ce84ff09aa5a6c2d1eda4c3323caaa6effd52b0b18",
+      "id": "artifact:7b5d4be5557d5dd2f5e01ef9",
+      "inspection": "static-definition",
+      "path": "schedule.cron",
+      "service": "legacy_orders",
+      "size": 123,
+      "source_id": "legacy_dev"
+    },
+    {
+      "environment": "dev",
+      "format": "ktr",
+      "hash": "55959ca630079a6c4caf0d9f9bef4a2dfba4c6fce3618f756177198e51d717b8",
+      "id": "artifact:20ae0a0abb76f7f50ac04db6",
+      "inspection": "static-definition",
+      "path": "transform.ktr",
+      "service": "legacy_orders",
+      "size": 1151,
+      "source_id": "legacy_dev"
+    },
+    {
+      "environment": "prod",
+      "format": "md",
+      "hash": "c50ddd48a7986f3293eab1f39d2982302c38f71345164abc57be25a593e7f36f",
+      "id": "artifact:51b27154cc4f5659020a3d3e",
+      "inspection": "static-definition",
+      "path": "README.md",
+      "service": "legacy_orders",
+      "size": 185,
+      "source_id": "legacy_prod"
+    },
+    {
+      "environment": "prod",
+      "format": "sql",
+      "hash": "d80113c92f0f2b62c440c008d2df7a575185a94216e352bf6518e5a38942ed2f",
+      "id": "artifact:bbcdbd7f3be1b0fdc3fea105",
+      "inspection": "static-definition",
+      "path": "publish.sql",
+      "service": "legacy_orders",
+      "size": 175,
+      "source_id": "legacy_prod"
+    },
+    {
+      "environment": "prod",
+      "format": "ktr",
+      "hash": "55959ca630079a6c4caf0d9f9bef4a2dfba4c6fce3618f756177198e51d717b8",
+      "id": "artifact:9fe3e932b2d0114aea436ef7",
+      "inspection": "static-definition",
+      "path": "transform.ktr",
+      "service": "legacy_orders",
+      "size": 1151,
+      "source_id": "legacy_prod"
+    },
+    {
+      "environment": "dev",
+      "format": "md",
+      "hash": "2458388259b04c3c2a8fc57b9fa7b0b278c75ab47b503805b46bc76058df82a1",
+      "id": "artifact:341e02d3c6e9afe915f68a4d",
+      "inspection": "static-definition",
+      "path": "README.md",
+      "service": "analytics_warehouse",
+      "size": 657,
+      "source_id": "modern_dev"
+    },
+    {
+      "environment": "dev",
+      "format": "py",
+      "hash": "fe5f816b86c8e46364c02a448c1fc325bdd2ecae0feb8780ad2c29f8b06fec65",
+      "id": "artifact:9a568b178dd0c59aff979e28",
+      "inspection": "static-definition",
+      "path": "dag.py",
+      "service": "analytics_warehouse",
+      "size": 441,
+      "source_id": "modern_dev"
+    },
+    {
+      "environment": "dev",
+      "format": "py",
+      "hash": "3c48f1535773dee8f7eee2b3a2e4b0a443489844893f5a93988561a9f2e23ad6",
+      "id": "artifact:1938fc27c4cb3c109691f078",
+      "inspection": "static-definition",
+      "path": "dynamic_dag.py",
+      "service": "analytics_warehouse",
+      "size": 312,
+      "source_id": "modern_dev"
+    },
+    {
+      "environment": "dev",
+      "format": "json",
+      "hash": "f7eb0b3ece365e964577ba4eef4e9786f43e4d4856d35ce04d2ffbc9f43d714a",
+      "id": "artifact:38e69d7ff5cb76d56437a26f",
+      "inspection": "static-definition",
+      "path": "manifest.json",
+      "service": "analytics_warehouse",
+      "size": 2732,
+      "source_id": "modern_dev"
+    },
+    {
+      "environment": "dev",
+      "format": "txt",
+      "hash": "b903f65a2c87f2693d81154d32304ece7d1b3c029dc21cb17b1868ec506b320d",
+      "id": "artifact:67f9cee49eb655d102580271",
+      "inspection": "static-definition",
+      "path": "requirements.txt",
+      "service": "analytics_warehouse",
+      "size": 95,
+      "source_id": "modern_dev"
+    },
+    {
+      "environment": "test",
+      "format": "md",
+      "hash": "142f9ea22bade245be553119b917a34f5b71acce6c4052aa64e7191d088c2383",
+      "id": "artifact:84f2e94700679cb215e0afde",
+      "inspection": "static-definition",
+      "path": "PROMPT.md",
+      "service": "untrusted_fixture",
+      "size": 196,
+      "source_id": "adversarial"
+    },
+    {
+      "environment": "test",
+      "format": "py",
+      "hash": "9106327776fe26954e88aad7da0b7070249d6e622868d7efea90d2db2b028519",
+      "id": "artifact:c0defa47c831d397ca0095d7",
+      "inspection": "static-definition",
+      "path": "airflow.py",
+      "service": "untrusted_fixture",
+      "size": 112,
+      "source_id": "adversarial"
+    },
+    {
+      "environment": "test",
+      "format": "sql",
+      "hash": "df81d7b2738bcb775dd99077714bc31c5f55f1edfedb4cc0e479ddaceefabb9d",
+      "id": "artifact:4a656c4ef2b84ea668f6df6c",
+      "inspection": "static-definition",
+      "path": "ambiguous.sql",
+      "service": "untrusted_fixture",
+      "size": 106,
+      "source_id": "adversarial"
+    },
+    {
+      "environment": "test",
+      "format": "json",
+      "hash": "e0c11acf5e11e9fe33186d2b08882eced029a06fe4a6286cf91f83839dbabb38",
+      "id": "artifact:487a792b603e24746259aea8",
+      "inspection": "static-definition",
+      "path": "dbt-v11.json",
+      "service": "untrusted_fixture",
+      "size": 256,
+      "source_id": "adversarial"
+    },
+    {
+      "environment": "test",
+      "format": "py",
+      "hash": "de2fdf2c1e1a9d6cc731c32c0f8be66dc15c0873bbc5fbb2efbe3bde6a73dd76",
+      "id": "artifact:9f62ae9fe30855289d9b51c0",
+      "inspection": "static-definition",
+      "path": "hostile.py",
+      "service": "untrusted_fixture",
+      "size": 225,
+      "source_id": "adversarial"
+    },
+    {
+      "environment": "test",
+      "format": "json",
+      "hash": "fe56b9af5ee5229e9634497f8fad5c9bcfc88c2c09e1620525255ae1888567d3",
+      "id": "artifact:956d356457d98057ac27025a",
+      "inspection": "static-definition",
+      "path": "secrets.json",
+      "service": "untrusted_fixture",
+      "size": 317,
+      "source_id": "adversarial"
+    },
+    {
+      "environment": "test",
+      "format": "workflow",
+      "hash": "4e72f0c924e21c3bdfab9f912249d6a615c4dc3cce625cf8b6683b63282fe848",
+      "id": "artifact:3a1351a658863df2f8668e93",
+      "inspection": "static-definition",
+      "path": "unknown.workflow",
+      "service": "untrusted_fixture",
+      "size": 120,
+      "source_id": "adversarial"
+    },
+    {
+      "environment": "test",
+      "format": "ktr",
+      "hash": "9c523c3ec4dd9458c3b2a39640d676a549a138b45a2946417a55111208ae26d8",
+      "id": "artifact:d78457191d0eecfe5789874d",
+      "inspection": "static-definition",
+      "path": "unsafe.ktr",
+      "service": "untrusted_fixture",
+      "size": 169,
+      "source_id": "adversarial"
+    },
+    {
+      "environment": "dev",
+      "format": "json",
+      "hash": "ec964b0d8d021bfd30a761b07b8281050ce22c9c64e6dc075e7eff6dc264f215",
+      "id": "artifact:d87653a3417f89e9ea9a8a6e",
+      "inspection": "static-definition",
+      "path": "compose-misleading.json",
+      "service": "architecture_dev",
+      "size": 120,
+      "source_id": "arch_dev"
+    },
+    {
+      "environment": "dev",
+      "format": "json",
+      "hash": "699fb2f4cb6b24b16a27ceb2c7548fb528b41003d97a0ecdf343711572a23eca",
+      "id": "artifact:06112cc528a37b2b69b33d94",
+      "inspection": "static-definition",
+      "path": "compose.json",
+      "service": "architecture_dev",
+      "size": 980,
+      "source_id": "arch_dev"
+    },
+    {
+      "environment": "dev",
+      "format": "json",
+      "hash": "65703bc88f059c3c28ef6569763bd6a7c5c9d30cd83858b2a784e88dbfda594f",
+      "id": "artifact:8d0ababaf247f37ff967f4a8",
+      "inspection": "static-definition",
+      "path": "dynamic-map.json",
+      "service": "architecture_dev",
+      "size": 694,
+      "source_id": "arch_dev"
+    },
+    {
+      "environment": "dev",
+      "format": "json",
+      "hash": "9f00a27d4526c3be42d791c594934168ade9fa6c5b5cbe8247df833bda3dda15",
+      "id": "artifact:3f5109c74890a26085d07112",
+      "inspection": "static-definition",
+      "path": "environment-conflict.json",
+      "service": "architecture_dev",
+      "size": 321,
+      "source_id": "arch_dev"
+    },
+    {
+      "environment": "dev",
+      "format": "json",
+      "hash": "23b6986935f8656dc7221c3670e461b0685ce54c92aba7e016022f4a2389a662",
+      "id": "artifact:2b1e33b59db737cd6c3a9e36",
+      "inspection": "static-definition",
+      "path": "environment-map.json",
+      "service": "architecture_dev",
+      "size": 9555,
+      "source_id": "arch_dev"
+    },
+    {
+      "environment": "dev",
+      "format": "json",
+      "hash": "7f7094bdf509fc12f279e3b65ed3df8aa3fd9cd5139a3fa9e282efe303722a07",
+      "id": "artifact:f6a1b919a76e736db6a5474d",
+      "inspection": "static-definition",
+      "path": "future-map.json",
+      "service": "architecture_dev",
+      "size": 146,
+      "source_id": "arch_dev"
+    },
+    {
+      "environment": "dev",
+      "format": "json",
+      "hash": "5a025670e9d693294f581011aba9afb5e8474fe274fad2475333aeda906c4f1e",
+      "id": "artifact:4712a77e5cb128eaac0ced14",
+      "inspection": "static-definition",
+      "path": "malformed-map.json",
+      "service": "architecture_dev",
+      "size": 196,
+      "source_id": "arch_dev"
+    },
+    {
+      "environment": "prod",
+      "format": "json",
+      "hash": "699fb2f4cb6b24b16a27ceb2c7548fb528b41003d97a0ecdf343711572a23eca",
+      "id": "artifact:23378db00ec45e1c10e05fde",
+      "inspection": "static-definition",
+      "path": "compose.json",
+      "service": "architecture_prod",
+      "size": 980,
+      "source_id": "arch_prod"
+    },
+    {
+      "environment": "prod",
+      "format": "json",
+      "hash": "5efd827d8fe151c945ba5ad4549bdd54431c170b34542ca0e8cbc6a5f74f293f",
+      "id": "artifact:6882c2fc19d08ce45e17bdde",
+      "inspection": "static-definition",
+      "path": "environment-map.json",
+      "service": "architecture_prod",
+      "size": 6491,
+      "source_id": "arch_prod"
+    }
+  ],
+  "capabilities": [
+    {
+      "adapters": [
+        "builtin:airflow"
+      ],
+      "applicable_versions": [
+        "Airflow 2.10 fixture subset"
+      ],
+      "architecture_features": {
+        "architecture_views": "subset",
+        "component_inventory": "unsupported",
+        "configured_connections": "unsupported",
+        "deployment_configuration": "unsupported",
+        "exact_bindings": "unsupported",
+        "report_consumers": "unsupported",
+        "technology_role_evidence": "detection-only",
+        "workflow_walkthroughs": "subset"
+      },
+      "family": "orchestrator",
+      "features": {
+        "column_lineage": "unsupported",
+        "control_flow": "subset",
+        "detection": "subset",
+        "documentation": "subset",
+        "metadata_extraction": "subset",
+        "runtime_evidence": "unsupported",
+        "schedules": "subset",
+        "table_lineage": "unsupported",
+        "version_identification": "subset"
+      },
+      "fixtures": [
+        "fixtures/legacy",
+        "fixtures/modern",
+        "fixtures/adversarial"
+      ],
+      "limitations": [
+        "AST literal DAG/tasks and >>/<< dependencies only; no imports or DAG execution; dynamic factories unsupported.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures."
+      ],
+      "maturity": "reference",
+      "official_references": [
+        "https://airflow.apache.org/docs/apache-airflow/2.10.4/core-concepts/tasks.html"
+      ],
+      "technology": "airflow",
+      "tests": [
+        "tests/test_acceptance.py",
+        "tests/test_core.py"
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "adapters": [],
+      "applicable_versions": [
+        "*"
+      ],
+      "architecture_features": {
+        "architecture_views": "unsupported",
+        "component_inventory": "unsupported",
+        "configured_connections": "unsupported",
+        "deployment_configuration": "unsupported",
+        "exact_bindings": "unsupported",
+        "report_consumers": "unsupported",
+        "technology_role_evidence": "detection-only",
+        "workflow_walkthroughs": "unsupported"
+      },
+      "family": "warehouse",
+      "features": {
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "detection": "subset",
+        "documentation": "subset",
+        "metadata_extraction": "unsupported",
+        "runtime_evidence": "unsupported",
+        "schedules": "unsupported",
+        "table_lineage": "unsupported",
+        "version_identification": "unsupported"
+      },
+      "fixtures": [],
+      "limitations": [
+        "SDK/manifest declaration only; client version is not warehouse version.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures.",
+        "Signature implemented but not measured against labeled positive fixtures in this MVP."
+      ],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://cloud.google.com/bigquery/docs"
+      ],
+      "technology": "bigquery",
+      "tests": [],
+      "version": "1.0.0"
+    },
+    {
+      "adapters": [
+        "builtin:shell"
+      ],
+      "applicable_versions": [
+        "*"
+      ],
+      "architecture_features": {
+        "architecture_views": "subset",
+        "component_inventory": "unsupported",
+        "configured_connections": "unsupported",
+        "deployment_configuration": "unsupported",
+        "exact_bindings": "unsupported",
+        "report_consumers": "unsupported",
+        "technology_role_evidence": "detection-only",
+        "workflow_walkthroughs": "subset"
+      },
+      "family": "scheduler",
+      "features": {
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "detection": "subset",
+        "documentation": "subset",
+        "metadata_extraction": "subset",
+        "runtime_evidence": "unsupported",
+        "schedules": "subset",
+        "table_lineage": "unsupported",
+        "version_identification": "unsupported"
+      },
+      "fixtures": [
+        "fixtures/legacy",
+        "fixtures/modern",
+        "fixtures/adversarial"
+      ],
+      "limitations": [
+        "Five-field cron subset, timezone/context not inferred; commands are declarations.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures."
+      ],
+      "maturity": "reference",
+      "official_references": [
+        "https://man7.org/linux/man-pages/man5/crontab.5.html"
+      ],
+      "technology": "cron",
+      "tests": [
+        "tests/test_acceptance.py",
+        "tests/test_core.py"
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "adapters": [],
+      "applicable_versions": [
+        "*"
+      ],
+      "architecture_features": {
+        "architecture_views": "unsupported",
+        "component_inventory": "unsupported",
+        "configured_connections": "unsupported",
+        "deployment_configuration": "unsupported",
+        "exact_bindings": "unsupported",
+        "report_consumers": "unsupported",
+        "technology_role_evidence": "detection-only",
+        "workflow_walkthroughs": "unsupported"
+      },
+      "family": "orchestrator",
+      "features": {
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "detection": "subset",
+        "documentation": "subset",
+        "metadata_extraction": "unsupported",
+        "runtime_evidence": "unsupported",
+        "schedules": "unsupported",
+        "table_lineage": "unsupported",
+        "version_identification": "unsupported"
+      },
+      "fixtures": [],
+      "limitations": [
+        "No Dagster graph adapter.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures.",
+        "Signature implemented but not measured against labeled positive fixtures in this MVP."
+      ],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://docs.dagster.io/"
+      ],
+      "technology": "dagster",
+      "tests": [],
+      "version": "1.0.0"
+    },
+    {
+      "adapters": [],
+      "applicable_versions": [
+        "*"
+      ],
+      "architecture_features": {
+        "architecture_views": "unsupported",
+        "component_inventory": "unsupported",
+        "configured_connections": "unsupported",
+        "deployment_configuration": "unsupported",
+        "exact_bindings": "unsupported",
+        "report_consumers": "unsupported",
+        "technology_role_evidence": "detection-only",
+        "workflow_walkthroughs": "unsupported"
+      },
+      "family": "compute",
+      "features": {
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "detection": "subset",
+        "documentation": "subset",
+        "metadata_extraction": "unsupported",
+        "runtime_evidence": "unsupported",
+        "schedules": "unsupported",
+        "table_lineage": "unsupported",
+        "version_identification": "unsupported"
+      },
+      "fixtures": [],
+      "limitations": [
+        "SDK import or bundle signature only.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures.",
+        "Signature implemented but not measured against labeled positive fixtures in this MVP."
+      ],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://docs.databricks.com/dev-tools/bundles/"
+      ],
+      "technology": "databricks",
+      "tests": [],
+      "version": "1.0.0"
+    },
+    {
+      "adapters": [
+        "builtin:dbt"
+      ],
+      "applicable_versions": [
+        "manifest v12 / dbt 1.8 fixtures"
+      ],
+      "architecture_features": {
+        "architecture_views": "subset",
+        "component_inventory": "unsupported",
+        "configured_connections": "unsupported",
+        "deployment_configuration": "unsupported",
+        "exact_bindings": "unsupported",
+        "report_consumers": "unsupported",
+        "technology_role_evidence": "detection-only",
+        "workflow_walkthroughs": "subset"
+      },
+      "family": "transformation",
+      "features": {
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "detection": "subset",
+        "documentation": "subset",
+        "metadata_extraction": "subset",
+        "runtime_evidence": "unsupported",
+        "schedules": "unsupported",
+        "table_lineage": "subset",
+        "version_identification": "subset"
+      },
+      "fixtures": [
+        "fixtures/legacy",
+        "fixtures/modern",
+        "fixtures/adversarial"
+      ],
+      "limitations": [
+        "Manifest v12 dependency edges and columns metadata; no compiled SQL column analysis or execution; other manifest schemas reported as unsupported.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures.",
+        "Unrecognized manifest schema versions remain detected with unsupported extraction reported."
+      ],
+      "maturity": "reference",
+      "official_references": [
+        "https://docs.getdbt.com/reference/artifacts/manifest-json"
+      ],
+      "technology": "dbt",
+      "tests": [
+        "tests/test_acceptance.py",
+        "tests/test_core.py"
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "adapters": [
+        "builtin:compose"
+      ],
+      "applicable_versions": [
+        "Dockerfile FROM declarations",
+        "Compose normalized JSON with name/services/resources"
+      ],
+      "architecture_features": {
+        "architecture_views": "subset",
+        "component_inventory": "subset",
+        "configured_connections": "unsupported",
+        "deployment_configuration": "subset",
+        "exact_bindings": "unsupported",
+        "report_consumers": "unsupported",
+        "technology_role_evidence": "detection-only",
+        "workflow_walkthroughs": "unsupported"
+      },
+      "family": "deployment",
+      "features": {
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "detection": "subset",
+        "documentation": "subset",
+        "metadata_extraction": "subset",
+        "runtime_evidence": "unsupported",
+        "schedules": "unsupported",
+        "table_lineage": "unsupported",
+        "version_identification": "subset"
+      },
+      "fixtures": [
+        "fixtures/architecture"
+      ],
+      "limitations": [
+        "Dockerfile is detection-only; Compose JSON parser extracts static service/image/network/volume/startup declarations.",
+        "Shared networks do not prove communication. Startup conditions do not prove readiness or execution.",
+        "Actual deployment host and running state are unknown. No YAML parsing or Docker calls."
+      ],
+      "maturity": "reference",
+      "official_references": [
+        "https://docs.docker.com/reference/cli/docker/compose/config/",
+        "https://docs.docker.com/reference/compose-file/services/"
+      ],
+      "technology": "docker",
+      "tests": [
+        "tests/test_architecture_adapters.py",
+        "tests/test_architecture_acceptance.py"
+      ],
+      "version": "1.1.0"
+    },
+    {
+      "adapters": [
+        "builtin:environment_map"
+      ],
+      "applicable_versions": [
+        "pipeline-handbook.environment/v1"
+      ],
+      "architecture_features": {
+        "architecture_views": "subset",
+        "component_inventory": "subset",
+        "configured_connections": "subset",
+        "deployment_configuration": "subset",
+        "exact_bindings": "subset",
+        "report_consumers": "subset",
+        "technology_role_evidence": "subset",
+        "workflow_walkthroughs": "subset"
+      },
+      "family": "metadata",
+      "features": {
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "detection": "subset",
+        "documentation": "subset",
+        "metadata_extraction": "subset",
+        "runtime_evidence": "unsupported",
+        "schedules": "unsupported",
+        "table_lineage": "unsupported",
+        "version_identification": "unsupported"
+      },
+      "fixtures": [
+        "fixtures/architecture"
+      ],
+      "limitations": [
+        "Supplied declarations only, never independent deployment/communication/runtime proof.",
+        "Exact same-environment selectors required; missing/inaccessible/excluded endpoints stay unresolved.",
+        "Generic report/form metadata only; no proprietary BI/form parser."
+      ],
+      "maturity": "reference",
+      "official_references": [],
+      "technology": "environment-map",
+      "tests": [
+        "tests/test_architecture_adapters.py",
+        "tests/test_architecture_acceptance.py"
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "adapters": [],
+      "applicable_versions": [
+        "*"
+      ],
+      "architecture_features": {
+        "architecture_views": "unsupported",
+        "component_inventory": "unsupported",
+        "configured_connections": "unsupported",
+        "deployment_configuration": "unsupported",
+        "exact_bindings": "unsupported",
+        "report_consumers": "unsupported",
+        "technology_role_evidence": "detection-only",
+        "workflow_walkthroughs": "unsupported"
+      },
+      "family": "messaging",
+      "features": {
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "detection": "subset",
+        "documentation": "subset",
+        "metadata_extraction": "unsupported",
+        "runtime_evidence": "unsupported",
+        "schedules": "unsupported",
+        "table_lineage": "unsupported",
+        "version_identification": "unsupported"
+      },
+      "fixtures": [
+        "fixtures/legacy",
+        "fixtures/modern",
+        "fixtures/adversarial"
+      ],
+      "limitations": [
+        "Client import/dependency only. No broker metadata or topic lineage.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures."
+      ],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://kafka.apache.org/documentation/"
+      ],
+      "technology": "kafka",
+      "tests": [
+        "tests/test_acceptance.py",
+        "tests/test_core.py"
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "adapters": [],
+      "applicable_versions": [
+        "*"
+      ],
+      "architecture_features": {
+        "architecture_views": "unsupported",
+        "component_inventory": "unsupported",
+        "configured_connections": "unsupported",
+        "deployment_configuration": "unsupported",
+        "exact_bindings": "unsupported",
+        "report_consumers": "unsupported",
+        "technology_role_evidence": "detection-only",
+        "workflow_walkthroughs": "unsupported"
+      },
+      "family": "deployment",
+      "features": {
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "detection": "subset",
+        "documentation": "subset",
+        "metadata_extraction": "unsupported",
+        "runtime_evidence": "unsupported",
+        "schedules": "unsupported",
+        "table_lineage": "unsupported",
+        "version_identification": "unsupported"
+      },
+      "fixtures": [],
+      "limitations": [
+        "Detection-only. No YAML parser, deployment semantics or running cluster metadata.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures.",
+        "Signature implemented but not measured against labeled positive fixtures in this MVP."
+      ],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://kubernetes.io/docs/concepts/workloads/controllers/deployment/"
+      ],
+      "technology": "kubernetes",
+      "tests": [],
+      "version": "1.0.0"
+    },
+    {
+      "adapters": [],
+      "applicable_versions": [
+        "*"
+      ],
+      "architecture_features": {
+        "architecture_views": "unsupported",
+        "component_inventory": "unsupported",
+        "configured_connections": "unsupported",
+        "deployment_configuration": "unsupported",
+        "exact_bindings": "unsupported",
+        "report_consumers": "unsupported",
+        "technology_role_evidence": "detection-only",
+        "workflow_walkthroughs": "unsupported"
+      },
+      "family": "storage",
+      "features": {
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "detection": "subset",
+        "documentation": "subset",
+        "metadata_extraction": "unsupported",
+        "runtime_evidence": "unsupported",
+        "schedules": "unsupported",
+        "table_lineage": "unsupported",
+        "version_identification": "unsupported"
+      },
+      "fixtures": [],
+      "limitations": [
+        "AWS SDK candidate does not establish an S3 connection; further configuration is needed.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures.",
+        "Signature implemented but not measured against labeled positive fixtures in this MVP."
+      ],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html"
+      ],
+      "technology": "object-storage",
+      "tests": [],
+      "version": "1.0.0"
+    },
+    {
+      "adapters": [
+        "builtin:pentaho"
+      ],
+      "applicable_versions": [
+        "PDI 9.4 fixture subset"
+      ],
+      "architecture_features": {
+        "architecture_views": "subset",
+        "component_inventory": "unsupported",
+        "configured_connections": "unsupported",
+        "deployment_configuration": "unsupported",
+        "exact_bindings": "unsupported",
+        "report_consumers": "unsupported",
+        "technology_role_evidence": "detection-only",
+        "workflow_walkthroughs": "subset"
+      },
+      "family": "etl",
+      "features": {
+        "column_lineage": "subset",
+        "control_flow": "subset",
+        "detection": "subset",
+        "documentation": "subset",
+        "metadata_extraction": "subset",
+        "runtime_evidence": "unsupported",
+        "schedules": "unsupported",
+        "table_lineage": "subset",
+        "version_identification": "unsupported"
+      },
+      "fixtures": [
+        "fixtures/legacy",
+        "fixtures/modern",
+        "fixtures/adversarial"
+      ],
+      "limitations": [
+        "KTR TableInput/TableOutput and enabled stream hops only; job literal TRANS/SHELL references and conditional hops. No proprietary plugins or general step semantics.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures."
+      ],
+      "maturity": "reference",
+      "official_references": [
+        "https://docs.pentaho.com/pdia-data-integration"
+      ],
+      "technology": "pentaho",
+      "tests": [
+        "tests/test_acceptance.py",
+        "tests/test_core.py"
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "adapters": [
+        "builtin:sql"
+      ],
+      "applicable_versions": [
+        "PostgreSQL 16 SQL fixture subset",
+        "15/16 image declarations"
+      ],
+      "architecture_features": {
+        "architecture_views": "subset",
+        "component_inventory": "unsupported",
+        "configured_connections": "unsupported",
+        "deployment_configuration": "unsupported",
+        "exact_bindings": "unsupported",
+        "report_consumers": "unsupported",
+        "technology_role_evidence": "detection-only",
+        "workflow_walkthroughs": "subset"
+      },
+      "family": "database",
+      "features": {
+        "column_lineage": "subset",
+        "control_flow": "unsupported",
+        "detection": "subset",
+        "documentation": "subset",
+        "metadata_extraction": "subset",
+        "runtime_evidence": "unsupported",
+        "schedules": "unsupported",
+        "table_lineage": "subset",
+        "version_identification": "subset"
+      },
+      "fixtures": [
+        "fixtures/legacy",
+        "fixtures/modern",
+        "fixtures/adversarial"
+      ],
+      "limitations": [
+        "SQL subset requires explicit postgres dialect; single-source direct projections only for column lineage. XML connection alone is detection, not SQL extraction.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures."
+      ],
+      "maturity": "reference",
+      "official_references": [
+        "https://www.postgresql.org/docs/16/sql-createtableas.html"
+      ],
+      "technology": "postgresql",
+      "tests": [
+        "tests/test_acceptance.py",
+        "tests/test_core.py"
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "adapters": [],
+      "applicable_versions": [
+        "*"
+      ],
+      "architecture_features": {
+        "architecture_views": "unsupported",
+        "component_inventory": "unsupported",
+        "configured_connections": "unsupported",
+        "deployment_configuration": "unsupported",
+        "exact_bindings": "unsupported",
+        "report_consumers": "unsupported",
+        "technology_role_evidence": "detection-only",
+        "workflow_walkthroughs": "unsupported"
+      },
+      "family": "bi",
+      "features": {
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "detection": "subset",
+        "documentation": "subset",
+        "metadata_extraction": "unsupported",
+        "runtime_evidence": "unsupported",
+        "schedules": "unsupported",
+        "table_lineage": "unsupported",
+        "version_identification": "unsupported"
+      },
+      "fixtures": [],
+      "limitations": [
+        "Tabular model structural candidate only; Power BI vs Analysis Services unresolved without more metadata.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures.",
+        "Signature implemented but not measured against labeled positive fixtures in this MVP."
+      ],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://learn.microsoft.com/power-bi/developer/projects/projects-overview"
+      ],
+      "technology": "powerbi",
+      "tests": [],
+      "version": "1.0.0"
+    },
+    {
+      "adapters": [],
+      "applicable_versions": [
+        "*"
+      ],
+      "architecture_features": {
+        "architecture_views": "unsupported",
+        "component_inventory": "unsupported",
+        "configured_connections": "unsupported",
+        "deployment_configuration": "unsupported",
+        "exact_bindings": "unsupported",
+        "report_consumers": "unsupported",
+        "technology_role_evidence": "detection-only",
+        "workflow_walkthroughs": "unsupported"
+      },
+      "family": "language",
+      "features": {
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "detection": "subset",
+        "documentation": "subset",
+        "metadata_extraction": "unsupported",
+        "runtime_evidence": "unsupported",
+        "schedules": "unsupported",
+        "table_lineage": "unsupported",
+        "version_identification": "unsupported"
+      },
+      "fixtures": [
+        "fixtures/legacy",
+        "fixtures/modern",
+        "fixtures/adversarial"
+      ],
+      "limitations": [
+        "Only structural Python import signatures; not every Python program has these imports.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures."
+      ],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://docs.python.org/3/library/ast.html"
+      ],
+      "technology": "python",
+      "tests": [
+        "tests/test_acceptance.py",
+        "tests/test_core.py"
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "adapters": [
+        "builtin:shell"
+      ],
+      "applicable_versions": [
+        "*"
+      ],
+      "architecture_features": {
+        "architecture_views": "subset",
+        "component_inventory": "unsupported",
+        "configured_connections": "unsupported",
+        "deployment_configuration": "unsupported",
+        "exact_bindings": "unsupported",
+        "report_consumers": "unsupported",
+        "technology_role_evidence": "detection-only",
+        "workflow_walkthroughs": "subset"
+      },
+      "family": "language",
+      "features": {
+        "column_lineage": "unsupported",
+        "control_flow": "subset",
+        "detection": "subset",
+        "documentation": "subset",
+        "metadata_extraction": "subset",
+        "runtime_evidence": "unsupported",
+        "schedules": "unsupported",
+        "table_lineage": "unsupported",
+        "version_identification": "unsupported"
+      },
+      "fixtures": [
+        "fixtures/legacy",
+        "fixtures/modern",
+        "fixtures/adversarial"
+      ],
+      "limitations": [
+        "Static literal command references only; unknown cwd, expansion, loops and pipelines remain gaps.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures."
+      ],
+      "maturity": "reference",
+      "official_references": [
+        "https://pubs.opengroup.org/onlinepubs/9799919799/utilities/V3_chap02.html"
+      ],
+      "technology": "shell",
+      "tests": [
+        "tests/test_acceptance.py",
+        "tests/test_core.py"
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "adapters": [],
+      "applicable_versions": [
+        "*"
+      ],
+      "architecture_features": {
+        "architecture_views": "unsupported",
+        "component_inventory": "unsupported",
+        "configured_connections": "unsupported",
+        "deployment_configuration": "unsupported",
+        "exact_bindings": "unsupported",
+        "report_consumers": "unsupported",
+        "technology_role_evidence": "detection-only",
+        "workflow_walkthroughs": "unsupported"
+      },
+      "family": "warehouse",
+      "features": {
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "detection": "subset",
+        "documentation": "subset",
+        "metadata_extraction": "unsupported",
+        "runtime_evidence": "unsupported",
+        "schedules": "unsupported",
+        "table_lineage": "unsupported",
+        "version_identification": "unsupported"
+      },
+      "fixtures": [
+        "fixtures/legacy",
+        "fixtures/modern",
+        "fixtures/adversarial"
+      ],
+      "limitations": [
+        "Snowflake target declaration only. dbt adapter supplies manifest graph; no direct Snowflake SQL analyzer. Client versions are never reported as server versions.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures.",
+        "Client versions are recorded separately from server/tool versions; no warehouse server version identification."
+      ],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://docs.snowflake.com/en/user-guide/python-connector"
+      ],
+      "technology": "snowflake",
+      "tests": [
+        "tests/test_acceptance.py",
+        "tests/test_core.py"
+      ],
+      "version": "1.0.0"
+    },
+    {
+      "adapters": [],
+      "applicable_versions": [
+        "*"
+      ],
+      "architecture_features": {
+        "architecture_views": "unsupported",
+        "component_inventory": "unsupported",
+        "configured_connections": "unsupported",
+        "deployment_configuration": "unsupported",
+        "exact_bindings": "unsupported",
+        "report_consumers": "unsupported",
+        "technology_role_evidence": "detection-only",
+        "workflow_walkthroughs": "unsupported"
+      },
+      "family": "compute",
+      "features": {
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "detection": "subset",
+        "documentation": "subset",
+        "metadata_extraction": "unsupported",
+        "runtime_evidence": "unsupported",
+        "schedules": "unsupported",
+        "table_lineage": "unsupported",
+        "version_identification": "unsupported"
+      },
+      "fixtures": [],
+      "limitations": [
+        "No compute graph or SQL adapter.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures.",
+        "Signature implemented but not measured against labeled positive fixtures in this MVP."
+      ],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://spark.apache.org/docs/latest/"
+      ],
+      "technology": "spark",
+      "tests": [],
+      "version": "1.0.0"
+    },
+    {
+      "adapters": [],
+      "applicable_versions": [
+        "*"
+      ],
+      "architecture_features": {
+        "architecture_views": "unsupported",
+        "component_inventory": "unsupported",
+        "configured_connections": "unsupported",
+        "deployment_configuration": "unsupported",
+        "exact_bindings": "unsupported",
+        "report_consumers": "unsupported",
+        "technology_role_evidence": "detection-only",
+        "workflow_walkthroughs": "unsupported"
+      },
+      "family": "database",
+      "features": {
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "detection": "subset",
+        "documentation": "subset",
+        "metadata_extraction": "unsupported",
+        "runtime_evidence": "unsupported",
+        "schedules": "unsupported",
+        "table_lineage": "unsupported",
+        "version_identification": "unsupported"
+      },
+      "fixtures": [],
+      "limitations": [
+        "T-SQL structural candidate only; no SQL Server analyzer.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures.",
+        "Signature implemented but not measured against labeled positive fixtures in this MVP."
+      ],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://learn.microsoft.com/sql/t-sql/statements/create-procedure-transact-sql"
+      ],
+      "technology": "sqlserver",
+      "tests": [],
+      "version": "1.0.0"
+    },
+    {
+      "adapters": [],
+      "applicable_versions": [
+        "*"
+      ],
+      "architecture_features": {
+        "architecture_views": "unsupported",
+        "component_inventory": "unsupported",
+        "configured_connections": "unsupported",
+        "deployment_configuration": "unsupported",
+        "exact_bindings": "unsupported",
+        "report_consumers": "unsupported",
+        "technology_role_evidence": "detection-only",
+        "workflow_walkthroughs": "unsupported"
+      },
+      "family": "bi",
+      "features": {
+        "column_lineage": "unsupported",
+        "control_flow": "unsupported",
+        "detection": "subset",
+        "documentation": "subset",
+        "metadata_extraction": "unsupported",
+        "runtime_evidence": "unsupported",
+        "schedules": "unsupported",
+        "table_lineage": "unsupported",
+        "version_identification": "unsupported"
+      },
+      "fixtures": [
+        "fixtures/legacy",
+        "fixtures/modern",
+        "fixtures/adversarial"
+      ],
+      "limitations": [
+        "Workbook signature only. No Tableau datasource lineage adapter.",
+        "No live connection, runtime inference, or claim about successful execution.",
+        "Detection is limited to the listed signatures and synthetic fixtures."
+      ],
+      "maturity": "detection-only",
+      "official_references": [
+        "https://help.tableau.com/current/api/metadata_api/en-us/"
+      ],
+      "technology": "tableau",
+      "tests": [
+        "tests/test_acceptance.py",
+        "tests/test_core.py"
+      ],
+      "version": "1.0.0"
+    }
+  ],
+  "collected_at": "2026-10-30T01:00:24+00:00",
+  "detections": [
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:ed5ab0de7efbe10f833a31d6",
+      "category": "declared",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:compose"
+      ],
+      "environment": "dev",
+      "evidence": [
+        "evidence:f1144e103c19ff1eaf553e11"
+      ],
+      "family": "deployment",
+      "reasons": [
+        "structural docker_from signature"
+      ],
+      "rule_id": "builtin.docker",
+      "rule_version": "1.1.0",
+      "selected": true,
+      "service": "legacy_orders",
+      "source_id": "legacy_dev",
+      "support": "reference",
+      "technology": "docker",
+      "version_kinds": [
+        "unknown"
+      ],
+      "versions": [
+        "15.8"
+      ]
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:ed5ab0de7efbe10f833a31d6",
+      "category": "declared",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [
+        "Conflicting server/deployment versions in this environment/service: 15.8, 16.4. Resolve deployment vs export age; runtime version is unknown."
+      ],
+      "eligible_adapters": [
+        "builtin:sql"
+      ],
+      "environment": "dev",
+      "evidence": [
+        "evidence:3e2229462c8c857b9060689e"
+      ],
+      "family": "database",
+      "reasons": [
+        "structural docker_from signature"
+      ],
+      "rule_id": "builtin.postgresql",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "legacy_orders",
+      "source_id": "legacy_dev",
+      "support": "reference",
+      "technology": "postgresql",
+      "version_kinds": [
+        "server"
+      ],
+      "versions": [
+        "15.8"
+      ]
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:38d6298ed7c9b42cca863027",
+      "category": "mentioned",
+      "client_versions": [],
+      "confidence": "low",
+      "conflicts": [],
+      "eligible_adapters": [],
+      "environment": "dev",
+      "evidence": [
+        "evidence:c49c52fe3f96e58d3f2bfed9"
+      ],
+      "family": "messaging",
+      "reasons": [
+        "documentation mention only"
+      ],
+      "rule_id": "builtin.kafka",
+      "rule_version": "1.0.0",
+      "selected": false,
+      "service": "legacy_orders",
+      "source_id": "legacy_dev",
+      "support": "detection-only",
+      "technology": "kafka",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:38d6298ed7c9b42cca863027",
+      "category": "mentioned",
+      "client_versions": [],
+      "confidence": "low",
+      "conflicts": [],
+      "eligible_adapters": [],
+      "environment": "dev",
+      "evidence": [
+        "evidence:0e02f12ef8adb4efe9232e2d"
+      ],
+      "family": "etl",
+      "reasons": [
+        "documentation mention only"
+      ],
+      "rule_id": "builtin.pentaho",
+      "rule_version": "1.0.0",
+      "selected": false,
+      "service": "legacy_orders",
+      "source_id": "legacy_dev",
+      "support": "reference",
+      "technology": "pentaho",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:38d6298ed7c9b42cca863027",
+      "category": "mentioned",
+      "client_versions": [],
+      "confidence": "low",
+      "conflicts": [],
+      "eligible_adapters": [],
+      "environment": "dev",
+      "evidence": [
+        "evidence:abad13f2b14fbf651b0a5c64"
+      ],
+      "family": "database",
+      "reasons": [
+        "documentation mention only"
+      ],
+      "rule_id": "builtin.postgresql",
+      "rule_version": "1.0.0",
+      "selected": false,
+      "service": "legacy_orders",
+      "source_id": "legacy_dev",
+      "support": "reference",
+      "technology": "postgresql",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:38d6298ed7c9b42cca863027",
+      "category": "mentioned",
+      "client_versions": [],
+      "confidence": "low",
+      "conflicts": [],
+      "eligible_adapters": [],
+      "environment": "dev",
+      "evidence": [
+        "evidence:59f6e96645ebaabede92ee6c"
+      ],
+      "family": "language",
+      "reasons": [
+        "documentation mention only"
+      ],
+      "rule_id": "builtin.shell",
+      "rule_version": "1.0.0",
+      "selected": false,
+      "service": "legacy_orders",
+      "source_id": "legacy_dev",
+      "support": "reference",
+      "technology": "shell",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:38d6298ed7c9b42cca863027",
+      "category": "mentioned",
+      "client_versions": [],
+      "confidence": "low",
+      "conflicts": [],
+      "eligible_adapters": [],
+      "environment": "dev",
+      "evidence": [
+        "evidence:3351633f5425ade3c60ac309"
+      ],
+      "family": "bi",
+      "reasons": [
+        "documentation mention only"
+      ],
+      "rule_id": "builtin.tableau",
+      "rule_version": "1.0.0",
+      "selected": false,
+      "service": "legacy_orders",
+      "source_id": "legacy_dev",
+      "support": "detection-only",
+      "technology": "tableau",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:a15ba90f743d1408abe73c42",
+      "category": "recognized",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:sql"
+      ],
+      "environment": "dev",
+      "evidence": [
+        "evidence:5945efc8a9772deb66931c8b"
+      ],
+      "family": "database",
+      "reasons": [
+        "structural contains_all signature"
+      ],
+      "rule_id": "builtin.postgresql",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "legacy_orders",
+      "source_id": "legacy_dev",
+      "support": "reference",
+      "technology": "postgresql",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:70ce12b23f23cb306ab75237",
+      "category": "recognized",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:pentaho"
+      ],
+      "environment": "dev",
+      "evidence": [
+        "evidence:a8d5ada5a0e510b59ae11eb3"
+      ],
+      "family": "etl",
+      "reasons": [
+        "structural xml_structure signature"
+      ],
+      "rule_id": "builtin.pentaho",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "legacy_orders",
+      "source_id": "legacy_dev",
+      "support": "reference",
+      "technology": "pentaho",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:411e72b59020aa1c019c0594",
+      "category": "declared",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [
+        "Conflicting server/deployment versions in this environment/service: 15.8, 16.4. Resolve deployment vs export age; runtime version is unknown."
+      ],
+      "eligible_adapters": [
+        "builtin:sql"
+      ],
+      "environment": "dev",
+      "evidence": [
+        "evidence:e585ed62b791db42a8c63304"
+      ],
+      "family": "database",
+      "reasons": [
+        "structural json_fields signature"
+      ],
+      "rule_id": "builtin.postgresql",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "legacy_orders",
+      "source_exported_at": "2026-01-15T00:00:00Z",
+      "source_id": "legacy_dev",
+      "source_timestamp_status": "declared in export; not independently observed",
+      "support": "reference",
+      "technology": "postgresql",
+      "version_kinds": [
+        "server"
+      ],
+      "versions": [
+        "16.4"
+      ]
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:2238155e1e0f5ef4d019bb3f",
+      "category": "recognized",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:shell"
+      ],
+      "environment": "dev",
+      "evidence": [
+        "evidence:58c607abd1d53c12f358ab16"
+      ],
+      "family": "language",
+      "reasons": [
+        "structural shell signature"
+      ],
+      "rule_id": "builtin.shell",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "legacy_orders",
+      "source_id": "legacy_dev",
+      "support": "reference",
+      "technology": "shell",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:59892a897910f3cdd8e4b40f",
+      "category": "recognized",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:sql"
+      ],
+      "environment": "dev",
+      "evidence": [
+        "evidence:6c65c3d0dc23c32e9fc9fa0f"
+      ],
+      "family": "database",
+      "reasons": [
+        "structural contains_all signature"
+      ],
+      "rule_id": "builtin.postgresql",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "legacy_orders",
+      "source_id": "legacy_dev",
+      "support": "reference",
+      "technology": "postgresql",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:7b5d4be5557d5dd2f5e01ef9",
+      "category": "recognized",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:shell"
+      ],
+      "environment": "dev",
+      "evidence": [
+        "evidence:99ee9c96287e68afcc40382b"
+      ],
+      "family": "scheduler",
+      "reasons": [
+        "structural cron signature"
+      ],
+      "rule_id": "builtin.cron",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "legacy_orders",
+      "source_id": "legacy_dev",
+      "support": "reference",
+      "technology": "cron",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:20ae0a0abb76f7f50ac04db6",
+      "category": "recognized",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:pentaho"
+      ],
+      "environment": "dev",
+      "evidence": [
+        "evidence:477540fa844b831aba991afc"
+      ],
+      "family": "etl",
+      "reasons": [
+        "structural xml_structure signature"
+      ],
+      "rule_id": "builtin.pentaho",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "legacy_orders",
+      "source_id": "legacy_dev",
+      "support": "reference",
+      "technology": "pentaho",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:20ae0a0abb76f7f50ac04db6",
+      "category": "recognized",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:sql"
+      ],
+      "environment": "dev",
+      "evidence": [
+        "evidence:b261a4e82614e38257923249"
+      ],
+      "family": "database",
+      "reasons": [
+        "structural contains_all signature"
+      ],
+      "rule_id": "builtin.postgresql",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "legacy_orders",
+      "source_id": "legacy_dev",
+      "support": "reference",
+      "technology": "postgresql",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:bbcdbd7f3be1b0fdc3fea105",
+      "category": "recognized",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:sql"
+      ],
+      "environment": "prod",
+      "evidence": [
+        "evidence:586e8fc844ab17164481e7fb"
+      ],
+      "family": "database",
+      "reasons": [
+        "structural contains_all signature"
+      ],
+      "rule_id": "builtin.postgresql",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "legacy_orders",
+      "source_id": "legacy_prod",
+      "support": "reference",
+      "technology": "postgresql",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:9fe3e932b2d0114aea436ef7",
+      "category": "recognized",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:pentaho"
+      ],
+      "environment": "prod",
+      "evidence": [
+        "evidence:921bf9b5bf173401594801b3"
+      ],
+      "family": "etl",
+      "reasons": [
+        "structural xml_structure signature"
+      ],
+      "rule_id": "builtin.pentaho",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "legacy_orders",
+      "source_id": "legacy_prod",
+      "support": "reference",
+      "technology": "pentaho",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:9fe3e932b2d0114aea436ef7",
+      "category": "recognized",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:sql"
+      ],
+      "environment": "prod",
+      "evidence": [
+        "evidence:2ea5e9f521e6eb8f4c3815e9"
+      ],
+      "family": "database",
+      "reasons": [
+        "structural contains_all signature"
+      ],
+      "rule_id": "builtin.postgresql",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "legacy_orders",
+      "source_id": "legacy_prod",
+      "support": "reference",
+      "technology": "postgresql",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:341e02d3c6e9afe915f68a4d",
+      "category": "mentioned",
+      "client_versions": [],
+      "confidence": "low",
+      "conflicts": [],
+      "eligible_adapters": [],
+      "environment": "dev",
+      "evidence": [
+        "evidence:905894d00228ede4f0379366"
+      ],
+      "family": "orchestrator",
+      "reasons": [
+        "documentation mention only"
+      ],
+      "rule_id": "builtin.airflow",
+      "rule_version": "1.0.0",
+      "selected": false,
+      "service": "analytics_warehouse",
+      "source_id": "modern_dev",
+      "support": "reference",
+      "technology": "airflow",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:341e02d3c6e9afe915f68a4d",
+      "category": "mentioned",
+      "client_versions": [],
+      "confidence": "low",
+      "conflicts": [],
+      "eligible_adapters": [],
+      "environment": "dev",
+      "evidence": [
+        "evidence:d753b743f1d059b8de45eadc"
+      ],
+      "family": "transformation",
+      "reasons": [
+        "documentation mention only"
+      ],
+      "rule_id": "builtin.dbt",
+      "rule_version": "1.0.0",
+      "selected": false,
+      "service": "analytics_warehouse",
+      "source_id": "modern_dev",
+      "support": "reference",
+      "technology": "dbt",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:341e02d3c6e9afe915f68a4d",
+      "category": "mentioned",
+      "client_versions": [],
+      "confidence": "low",
+      "conflicts": [],
+      "eligible_adapters": [],
+      "environment": "dev",
+      "evidence": [
+        "evidence:40eecd144dec95d5fc175381"
+      ],
+      "family": "language",
+      "reasons": [
+        "documentation mention only"
+      ],
+      "rule_id": "builtin.python",
+      "rule_version": "1.0.0",
+      "selected": false,
+      "service": "analytics_warehouse",
+      "source_id": "modern_dev",
+      "support": "detection-only",
+      "technology": "python",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:341e02d3c6e9afe915f68a4d",
+      "category": "mentioned",
+      "client_versions": [],
+      "confidence": "low",
+      "conflicts": [],
+      "eligible_adapters": [],
+      "environment": "dev",
+      "evidence": [
+        "evidence:fd12daffdca7f26ff7633b66"
+      ],
+      "family": "warehouse",
+      "reasons": [
+        "documentation mention only"
+      ],
+      "rule_id": "builtin.snowflake",
+      "rule_version": "1.0.0",
+      "selected": false,
+      "service": "analytics_warehouse",
+      "source_id": "modern_dev",
+      "support": "detection-only",
+      "technology": "snowflake",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:9a568b178dd0c59aff979e28",
+      "category": "recognized",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:airflow"
+      ],
+      "environment": "dev",
+      "evidence": [
+        "evidence:0a3a7b7c0622612c47e2d202"
+      ],
+      "family": "orchestrator",
+      "reasons": [
+        "structural python_import signature"
+      ],
+      "rule_id": "builtin.airflow",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "analytics_warehouse",
+      "source_id": "modern_dev",
+      "support": "reference",
+      "technology": "airflow",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:9a568b178dd0c59aff979e28",
+      "category": "recognized",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [],
+      "environment": "dev",
+      "evidence": [
+        "evidence:941a1ad4843c362d9b3cffb6"
+      ],
+      "family": "language",
+      "reasons": [
+        "structural python_import signature"
+      ],
+      "rule_id": "builtin.python",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "analytics_warehouse",
+      "source_id": "modern_dev",
+      "support": "detection-only",
+      "technology": "python",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:1938fc27c4cb3c109691f078",
+      "category": "recognized",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:airflow"
+      ],
+      "environment": "dev",
+      "evidence": [
+        "evidence:1823a4c1a410c3687aa9fad6"
+      ],
+      "family": "orchestrator",
+      "reasons": [
+        "structural python_import signature"
+      ],
+      "rule_id": "builtin.airflow",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "analytics_warehouse",
+      "source_id": "modern_dev",
+      "support": "reference",
+      "technology": "airflow",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:1938fc27c4cb3c109691f078",
+      "category": "recognized",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [],
+      "environment": "dev",
+      "evidence": [
+        "evidence:430202c35ef244ef49dd721b"
+      ],
+      "family": "language",
+      "reasons": [
+        "structural python_import signature"
+      ],
+      "rule_id": "builtin.python",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "analytics_warehouse",
+      "source_id": "modern_dev",
+      "support": "detection-only",
+      "technology": "python",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:38e69d7ff5cb76d56437a26f",
+      "category": "recognized",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:dbt"
+      ],
+      "environment": "dev",
+      "evidence": [
+        "evidence:5f99413bf458f8715aa24230"
+      ],
+      "family": "transformation",
+      "reasons": [
+        "structural json_fields signature",
+        "dbt manifest metadata and dependency containers; version support validated by adapter"
+      ],
+      "rule_id": "builtin.dbt",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "analytics_warehouse",
+      "source_exported_at": "2026-01-15T00:00:00Z",
+      "source_id": "modern_dev",
+      "source_timestamp_status": "declared in export; not independently observed",
+      "support": "reference",
+      "technology": "dbt",
+      "version_kinds": [
+        "tool"
+      ],
+      "versions": [
+        "1.8.8"
+      ]
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:38e69d7ff5cb76d56437a26f",
+      "category": "declared",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [],
+      "environment": "dev",
+      "evidence": [
+        "evidence:5af4af09569d15df45c6b815"
+      ],
+      "family": "warehouse",
+      "reasons": [
+        "structural json_fields signature"
+      ],
+      "rule_id": "builtin.snowflake",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "analytics_warehouse",
+      "source_exported_at": "2026-01-15T00:00:00Z",
+      "source_id": "modern_dev",
+      "source_timestamp_status": "declared in export; not independently observed",
+      "support": "detection-only",
+      "technology": "snowflake",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:67f9cee49eb655d102580271",
+      "category": "declared",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:airflow"
+      ],
+      "environment": "dev",
+      "evidence": [
+        "evidence:b3bcce12853e44c738490ab7"
+      ],
+      "family": "orchestrator",
+      "reasons": [
+        "structural dependency signature"
+      ],
+      "rule_id": "builtin.airflow",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "analytics_warehouse",
+      "source_id": "modern_dev",
+      "support": "reference",
+      "technology": "airflow",
+      "version_kinds": [
+        "tool"
+      ],
+      "versions": [
+        "2.10.3"
+      ]
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:67f9cee49eb655d102580271",
+      "category": "declared",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:dbt"
+      ],
+      "environment": "dev",
+      "evidence": [
+        "evidence:4d060ea913df58ae45ebc87a"
+      ],
+      "family": "transformation",
+      "reasons": [
+        "structural dependency signature"
+      ],
+      "rule_id": "builtin.dbt",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "analytics_warehouse",
+      "source_id": "modern_dev",
+      "support": "reference",
+      "technology": "dbt",
+      "version_kinds": [
+        "tool"
+      ],
+      "versions": [
+        "1.8.8"
+      ]
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:67f9cee49eb655d102580271",
+      "category": "mentioned",
+      "client_versions": [],
+      "confidence": "low",
+      "conflicts": [],
+      "eligible_adapters": [],
+      "environment": "dev",
+      "evidence": [
+        "evidence:bf3cec88ee998903a880198e"
+      ],
+      "family": "language",
+      "reasons": [
+        "documentation mention only"
+      ],
+      "rule_id": "builtin.python",
+      "rule_version": "1.0.0",
+      "selected": false,
+      "service": "analytics_warehouse",
+      "source_id": "modern_dev",
+      "support": "detection-only",
+      "technology": "python",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:67f9cee49eb655d102580271",
+      "category": "declared",
+      "client_versions": [
+        "3.12.3"
+      ],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [],
+      "environment": "dev",
+      "evidence": [
+        "evidence:5c4fba626533fecc653b8ca3"
+      ],
+      "family": "warehouse",
+      "reasons": [
+        "Snowflake client dependency declaration; warehouse server version remains unknown"
+      ],
+      "rule_id": "builtin.snowflake",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "analytics_warehouse",
+      "source_id": "modern_dev",
+      "support": "detection-only",
+      "technology": "snowflake",
+      "version_kinds": [
+        "client"
+      ],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:487a792b603e24746259aea8",
+      "category": "recognized",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:dbt"
+      ],
+      "environment": "test",
+      "evidence": [
+        "evidence:f0302ffa86f013ce711c5452"
+      ],
+      "family": "transformation",
+      "reasons": [
+        "dbt manifest metadata and dependency containers; version support validated by adapter"
+      ],
+      "rule_id": "builtin.dbt",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "untrusted_fixture",
+      "source_exported_at": "2026-01-15T00:00:00Z",
+      "source_id": "adversarial",
+      "source_timestamp_status": "declared in export; not independently observed",
+      "support": "reference",
+      "technology": "dbt",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:9f62ae9fe30855289d9b51c0",
+      "category": "recognized",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [],
+      "environment": "test",
+      "evidence": [
+        "evidence:98811427968c8bfcd20d67ba"
+      ],
+      "family": "language",
+      "reasons": [
+        "structural python_import signature"
+      ],
+      "rule_id": "builtin.python",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "untrusted_fixture",
+      "source_id": "adversarial",
+      "support": "detection-only",
+      "technology": "python",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:06112cc528a37b2b69b33d94",
+      "category": "declared",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:compose"
+      ],
+      "environment": "dev",
+      "evidence": [
+        "evidence:45defc36886855b1ab458936"
+      ],
+      "family": "deployment",
+      "reasons": [
+        "Normalized Compose JSON project, service image/build and resource structures"
+      ],
+      "rule_id": "builtin.docker",
+      "rule_version": "1.1.0",
+      "selected": true,
+      "service": "architecture_dev",
+      "source_id": "arch_dev",
+      "support": "reference",
+      "technology": "docker",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:8d0ababaf247f37ff967f4a8",
+      "category": "declared",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:environment_map"
+      ],
+      "environment": "dev",
+      "evidence": [
+        "evidence:6bdd8f19f3bc5b5e3d11bc6f"
+      ],
+      "family": "metadata",
+      "reasons": [
+        "Versioned environment metadata export with explicit component declarations and exact bindings",
+        "Environment-map format family candidate; adapter validates version/schema"
+      ],
+      "rule_id": "builtin.environment-map",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "architecture_dev",
+      "source_id": "arch_dev",
+      "support": "reference",
+      "technology": "environment-map",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:3f5109c74890a26085d07112",
+      "category": "declared",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:environment_map"
+      ],
+      "environment": "dev",
+      "evidence": [
+        "evidence:19067ebead599fa6890bdaef"
+      ],
+      "family": "metadata",
+      "reasons": [
+        "Versioned environment metadata export with explicit component declarations and exact bindings",
+        "Environment-map format family candidate; adapter validates version/schema"
+      ],
+      "rule_id": "builtin.environment-map",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "architecture_dev",
+      "source_id": "arch_dev",
+      "support": "reference",
+      "technology": "environment-map",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:2b1e33b59db737cd6c3a9e36",
+      "category": "declared",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:environment_map"
+      ],
+      "environment": "dev",
+      "evidence": [
+        "evidence:41211d91cddff01f680039d9"
+      ],
+      "family": "metadata",
+      "reasons": [
+        "Versioned environment metadata export with explicit component declarations and exact bindings",
+        "Environment-map format family candidate; adapter validates version/schema"
+      ],
+      "rule_id": "builtin.environment-map",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "architecture_dev",
+      "source_id": "arch_dev",
+      "support": "reference",
+      "technology": "environment-map",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:f6a1b919a76e736db6a5474d",
+      "category": "ambiguous",
+      "client_versions": [],
+      "confidence": "low",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:environment_map"
+      ],
+      "environment": "dev",
+      "evidence": [
+        "evidence:8e69839264a6a97cf7e691f3"
+      ],
+      "family": "metadata",
+      "reasons": [
+        "Environment-map format family candidate; adapter validates version/schema"
+      ],
+      "rule_id": "builtin.environment-map",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "architecture_dev",
+      "source_id": "arch_dev",
+      "support": "reference",
+      "technology": "environment-map",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:4712a77e5cb128eaac0ced14",
+      "category": "declared",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:environment_map"
+      ],
+      "environment": "dev",
+      "evidence": [
+        "evidence:86cfe125da9682adcaaf6fbc"
+      ],
+      "family": "metadata",
+      "reasons": [
+        "Versioned environment metadata export with explicit component declarations and exact bindings",
+        "Environment-map format family candidate; adapter validates version/schema"
+      ],
+      "rule_id": "builtin.environment-map",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "architecture_dev",
+      "source_id": "arch_dev",
+      "support": "reference",
+      "technology": "environment-map",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:23378db00ec45e1c10e05fde",
+      "category": "declared",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:compose"
+      ],
+      "environment": "prod",
+      "evidence": [
+        "evidence:41a0940e1667d3ef14276ebe"
+      ],
+      "family": "deployment",
+      "reasons": [
+        "Normalized Compose JSON project, service image/build and resource structures"
+      ],
+      "rule_id": "builtin.docker",
+      "rule_version": "1.1.0",
+      "selected": true,
+      "service": "architecture_prod",
+      "source_id": "arch_prod",
+      "support": "reference",
+      "technology": "docker",
+      "version_kinds": [],
+      "versions": []
+    },
+    {
+      "analysis_status": "not_requested",
+      "artifact_id": "artifact:6882c2fc19d08ce45e17bdde",
+      "category": "declared",
+      "client_versions": [],
+      "confidence": "high",
+      "conflicts": [],
+      "eligible_adapters": [
+        "builtin:environment_map"
+      ],
+      "environment": "prod",
+      "evidence": [
+        "evidence:ba807f4c9db7fab5237c7408"
+      ],
+      "family": "metadata",
+      "reasons": [
+        "Versioned environment metadata export with explicit component declarations and exact bindings",
+        "Environment-map format family candidate; adapter validates version/schema"
+      ],
+      "rule_id": "builtin.environment-map",
+      "rule_version": "1.0.0",
+      "selected": true,
+      "service": "architecture_prod",
+      "source_id": "arch_prod",
+      "support": "reference",
+      "technology": "environment-map",
+      "version_kinds": [],
+      "versions": []
+    }
+  ],
+  "edges": [],
+  "effective_config": {
+    "adapters": {
+      "exclude": [],
+      "include": [
+        "*"
+      ],
+      "plugins": [],
+      "trusted": [
+        "builtin:*"
+      ]
+    },
+    "budgets": {
+      "adapter_memory_mb": 512,
+      "adapter_timeout_seconds": 5,
+      "max_file_bytes": 1000000,
+      "max_files": 2000,
+      "max_nodes_per_adapter": 10000,
+      "max_total_bytes": 20000000,
+      "scan_timeout_seconds": 60
+    },
+    "discovery": {
+      "mode": "auto"
+    },
+    "output": {
+      "directory": "generated-output",
+      "formats": [
+        "markdown",
+        "html",
+        "json"
+      ]
+    },
+    "project": "pipeline_handbook_architecture_recovery",
+    "rules": {
+      "directories": [
+        "reviewed-rules:0"
+      ],
+      "exclude": [],
+      "include": [
+        "*"
+      ]
+    },
+    "security": {
+      "allowed_endpoints": [],
+      "network_enabled": false,
+      "redact": true
+    },
+    "sources": [
+      {
+        "environment": "dev",
+        "exclude": [],
+        "id": "legacy_dev",
+        "include": [
+          "*"
+        ],
+        "kind": "directory",
+        "path": "scope:legacy_dev",
+        "resource_filters": [
+          "*"
+        ],
+        "schema_filters": [
+          "*"
+        ],
+        "service": "legacy_orders"
+      },
+      {
+        "environment": "prod",
+        "exclude": [],
+        "id": "legacy_prod",
+        "include": [
+          "*"
+        ],
+        "kind": "directory",
+        "path": "scope:legacy_prod",
+        "resource_filters": [
+          "*"
+        ],
+        "schema_filters": [
+          "*"
+        ],
+        "service": "legacy_orders"
+      },
+      {
+        "environment": "dev",
+        "exclude": [],
+        "id": "modern_dev",
+        "include": [
+          "*"
+        ],
+        "kind": "directory",
+        "path": "scope:modern_dev",
+        "resource_filters": [
+          "*"
+        ],
+        "schema_filters": [
+          "*"
+        ],
+        "service": "analytics_warehouse"
+      },
+      {
+        "environment": "test",
+        "exclude": [],
+        "id": "adversarial",
+        "include": [
+          "*"
+        ],
+        "kind": "directory",
+        "path": "scope:adversarial",
+        "resource_filters": [
+          "*"
+        ],
+        "schema_filters": [
+          "*"
+        ],
+        "service": "untrusted_fixture"
+      },
+      {
+        "environment": "dev",
+        "exclude": [],
+        "id": "arch_dev",
+        "include": [
+          "*"
+        ],
+        "kind": "directory",
+        "path": "scope:arch_dev",
+        "resource_filters": [
+          "*"
+        ],
+        "schema_filters": [
+          "*"
+        ],
+        "service": "architecture_dev"
+      },
+      {
+        "environment": "prod",
+        "exclude": [],
+        "id": "arch_prod",
+        "include": [
+          "*"
+        ],
+        "kind": "directory",
+        "path": "scope:arch_prod",
+        "resource_filters": [
+          "*"
+        ],
+        "schema_filters": [
+          "*"
+        ],
+        "service": "architecture_prod"
+      }
+    ],
+    "technologies": {
+      "exclude": [],
+      "include": [
+        "*"
+      ],
+      "overrides": {}
+    }
+  },
+  "evidence": [
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:9a568b178dd0c59aff979e28",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:0a3a7b7c0622612c47e2d202",
+      "location": "modern_dev/dag.py:L2",
+      "reason": "structural python_import signature",
+      "rule_id": "builtin.airflow",
+      "rule_version": "1.0.0",
+      "source_hash": "fe5f816b86c8e46364c02a448c1fc325bdd2ecae0feb8780ad2c29f8b06fec65",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:38d6298ed7c9b42cca863027",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:0e02f12ef8adb4efe9232e2d",
+      "location": "legacy_dev/README.md:L1",
+      "reason": "documentation mention only",
+      "rule_id": "builtin.pentaho",
+      "rule_version": "1.0.0",
+      "source_hash": "3fab6936856a9fb9baf580b527e665a8436ae10264370e5dcd00c743e4c069d8",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:1938fc27c4cb3c109691f078",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:1823a4c1a410c3687aa9fad6",
+      "location": "modern_dev/dynamic_dag.py:L2",
+      "reason": "structural python_import signature",
+      "rule_id": "builtin.airflow",
+      "rule_version": "1.0.0",
+      "source_hash": "3c48f1535773dee8f7eee2b3a2e4b0a443489844893f5a93988561a9f2e23ad6",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:3f5109c74890a26085d07112",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:19067ebead599fa6890bdaef",
+      "location": "arch_dev/environment-conflict.json:L1",
+      "reason": "Versioned environment metadata export with explicit component declarations and exact bindings; Environment-map format family candidate; adapter validates version/schema",
+      "rule_id": "builtin.environment-map",
+      "rule_version": "1.0.0",
+      "source_hash": "9f00a27d4526c3be42d791c594934168ade9fa6c5b5cbe8247df833bda3dda15",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:inventory",
+      "adapter_version": "1.0.0",
+      "artifact_id": "source:c07f2741e9be30736084b10f",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:1e7b7035f6325f70cd6354d5",
+      "location": "arch_dev/[configured-scope]:L1",
+      "reason": "source_system definition: architecture_dev",
+      "rule_id": "inventory",
+      "rule_version": "1.0.0",
+      "source_hash": "8647daa1872d65945461d0b18f8872a8418ab680c24012d4f94077194b6c91f1",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:9fe3e932b2d0114aea436ef7",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:2ea5e9f521e6eb8f4c3815e9",
+      "location": "legacy_prod/transform.ktr:L5",
+      "reason": "structural contains_all signature",
+      "rule_id": "builtin.postgresql",
+      "rule_version": "1.0.0",
+      "source_hash": "55959ca630079a6c4caf0d9f9bef4a2dfba4c6fce3618f756177198e51d717b8",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:38d6298ed7c9b42cca863027",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:3351633f5425ade3c60ac309",
+      "location": "legacy_dev/README.md:L1",
+      "reason": "documentation mention only",
+      "rule_id": "builtin.tableau",
+      "rule_version": "1.0.0",
+      "source_hash": "3fab6936856a9fb9baf580b527e665a8436ae10264370e5dcd00c743e4c069d8",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:ed5ab0de7efbe10f833a31d6",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:3e2229462c8c857b9060689e",
+      "location": "legacy_dev/Dockerfile:L1",
+      "reason": "structural docker_from signature",
+      "rule_id": "builtin.postgresql",
+      "rule_version": "1.0.0",
+      "source_hash": "68466988f9b2c71d4c0864f099ab641da2a460b2e200f66261c3796ed4d763e5",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:341e02d3c6e9afe915f68a4d",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:40eecd144dec95d5fc175381",
+      "location": "modern_dev/README.md:L1",
+      "reason": "documentation mention only",
+      "rule_id": "builtin.python",
+      "rule_version": "1.0.0",
+      "source_hash": "2458388259b04c3c2a8fc57b9fa7b0b278c75ab47b503805b46bc76058df82a1",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:2b1e33b59db737cd6c3a9e36",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:41211d91cddff01f680039d9",
+      "location": "arch_dev/environment-map.json:L1",
+      "reason": "Versioned environment metadata export with explicit component declarations and exact bindings; Environment-map format family candidate; adapter validates version/schema",
+      "rule_id": "builtin.environment-map",
+      "rule_version": "1.0.0",
+      "source_hash": "23b6986935f8656dc7221c3670e461b0685ce54c92aba7e016022f4a2389a662",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:23378db00ec45e1c10e05fde",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:41a0940e1667d3ef14276ebe",
+      "location": "arch_prod/compose.json:L1",
+      "reason": "Normalized Compose JSON project, service image/build and resource structures",
+      "rule_id": "builtin.docker",
+      "rule_version": "1.1.0",
+      "source_hash": "699fb2f4cb6b24b16a27ceb2c7548fb528b41003d97a0ecdf343711572a23eca",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:1938fc27c4cb3c109691f078",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:430202c35ef244ef49dd721b",
+      "location": "modern_dev/dynamic_dag.py:L2",
+      "reason": "structural python_import signature",
+      "rule_id": "builtin.python",
+      "rule_version": "1.0.0",
+      "source_hash": "3c48f1535773dee8f7eee2b3a2e4b0a443489844893f5a93988561a9f2e23ad6",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:06112cc528a37b2b69b33d94",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:45defc36886855b1ab458936",
+      "location": "arch_dev/compose.json:L1",
+      "reason": "Normalized Compose JSON project, service image/build and resource structures",
+      "rule_id": "builtin.docker",
+      "rule_version": "1.1.0",
+      "source_hash": "699fb2f4cb6b24b16a27ceb2c7548fb528b41003d97a0ecdf343711572a23eca",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:20ae0a0abb76f7f50ac04db6",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:477540fa844b831aba991afc",
+      "location": "legacy_dev/transform.ktr:L1",
+      "reason": "structural xml_structure signature",
+      "rule_id": "builtin.pentaho",
+      "rule_version": "1.0.0",
+      "source_hash": "55959ca630079a6c4caf0d9f9bef4a2dfba4c6fce3618f756177198e51d717b8",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:inventory",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:d78457191d0eecfe5789874d",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:4903e5a044df9351cba97e31",
+      "location": "adversarial/unsafe.ktr:L1",
+      "reason": "unknown_artifact",
+      "rule_id": "inventory",
+      "rule_version": "1.0.0",
+      "source_hash": "9c523c3ec4dd9458c3b2a39640d676a549a138b45a2946417a55111208ae26d8",
+      "status": "unknown"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:67f9cee49eb655d102580271",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:4d060ea913df58ae45ebc87a",
+      "location": "modern_dev/requirements.txt:L2",
+      "reason": "structural dependency signature",
+      "rule_id": "builtin.dbt",
+      "rule_version": "1.0.0",
+      "source_hash": "b903f65a2c87f2693d81154d32304ece7d1b3c029dc21cb17b1868ec506b320d",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:inventory",
+      "adapter_version": "1.0.0",
+      "artifact_id": "source:aac87c600ae38b239ca5e103",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:4d733e40169ff8934bef4f8e",
+      "location": "modern_dev/[configured-scope]:L1",
+      "reason": "source_system definition: analytics_warehouse",
+      "rule_id": "inventory",
+      "rule_version": "1.0.0",
+      "source_hash": "8647daa1872d65945461d0b18f8872a8418ab680c24012d4f94077194b6c91f1",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:bbcdbd7f3be1b0fdc3fea105",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:586e8fc844ab17164481e7fb",
+      "location": "legacy_prod/publish.sql:L1",
+      "reason": "structural contains_all signature",
+      "rule_id": "builtin.postgresql",
+      "rule_version": "1.0.0",
+      "source_hash": "d80113c92f0f2b62c440c008d2df7a575185a94216e352bf6518e5a38942ed2f",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:2238155e1e0f5ef4d019bb3f",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:58c607abd1d53c12f358ab16",
+      "location": "legacy_dev/publish.sh:L1",
+      "reason": "structural shell signature",
+      "rule_id": "builtin.shell",
+      "rule_version": "1.0.0",
+      "source_hash": "e17cd036075fe2c717e0426ebfa06c13a406613a8ea92db41bc09e3ba111cfa6",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:a15ba90f743d1408abe73c42",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:5945efc8a9772deb66931c8b",
+      "location": "legacy_dev/dynamic.sql:L1",
+      "reason": "structural contains_all signature",
+      "rule_id": "builtin.postgresql",
+      "rule_version": "1.0.0",
+      "source_hash": "27f92ccc6adfb3899a0f6c4f2b1af196e9e8a25acb98a76e1ce6adf8588a34d4",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:38d6298ed7c9b42cca863027",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:59f6e96645ebaabede92ee6c",
+      "location": "legacy_dev/README.md:L1",
+      "reason": "documentation mention only",
+      "rule_id": "builtin.shell",
+      "rule_version": "1.0.0",
+      "source_hash": "3fab6936856a9fb9baf580b527e665a8436ae10264370e5dcd00c743e4c069d8",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:38e69d7ff5cb76d56437a26f",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:5af4af09569d15df45c6b815",
+      "location": "modern_dev/manifest.json:L1",
+      "reason": "structural json_fields signature",
+      "rule_id": "builtin.snowflake",
+      "rule_version": "1.0.0",
+      "source_hash": "f7eb0b3ece365e964577ba4eef4e9786f43e4d4856d35ce04d2ffbc9f43d714a",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:67f9cee49eb655d102580271",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:5c4fba626533fecc653b8ca3",
+      "location": "modern_dev/requirements.txt:L4",
+      "reason": "Snowflake client dependency declaration; warehouse server version remains unknown",
+      "rule_id": "builtin.snowflake",
+      "rule_version": "1.0.0",
+      "source_hash": "b903f65a2c87f2693d81154d32304ece7d1b3c029dc21cb17b1868ec506b320d",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:38e69d7ff5cb76d56437a26f",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:5f99413bf458f8715aa24230",
+      "location": "modern_dev/manifest.json:L1",
+      "reason": "structural json_fields signature; dbt manifest metadata and dependency containers; version support validated by adapter",
+      "rule_id": "builtin.dbt",
+      "rule_version": "1.0.0",
+      "source_hash": "f7eb0b3ece365e964577ba4eef4e9786f43e4d4856d35ce04d2ffbc9f43d714a",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:inventory",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:c0defa47c831d397ca0095d7",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:63fc2f7d30e01930962a837d",
+      "location": "adversarial/airflow.py:L1",
+      "reason": "unknown_artifact",
+      "rule_id": "inventory",
+      "rule_version": "1.0.0",
+      "source_hash": "9106327776fe26954e88aad7da0b7070249d6e622868d7efea90d2db2b028519",
+      "status": "unknown"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:8d0ababaf247f37ff967f4a8",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:6bdd8f19f3bc5b5e3d11bc6f",
+      "location": "arch_dev/dynamic-map.json:L1",
+      "reason": "Versioned environment metadata export with explicit component declarations and exact bindings; Environment-map format family candidate; adapter validates version/schema",
+      "rule_id": "builtin.environment-map",
+      "rule_version": "1.0.0",
+      "source_hash": "65703bc88f059c3c28ef6569763bd6a7c5c9d30cd83858b2a784e88dbfda594f",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:inventory",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:956d356457d98057ac27025a",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:6c34b6b13e770538b7d05489",
+      "location": "adversarial/secrets.json:L1",
+      "reason": "unknown_artifact",
+      "rule_id": "inventory",
+      "rule_version": "1.0.0",
+      "source_hash": "fe56b9af5ee5229e9634497f8fad5c9bcfc88c2c09e1620525255ae1888567d3",
+      "status": "unknown"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:59892a897910f3cdd8e4b40f",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:6c65c3d0dc23c32e9fc9fa0f",
+      "location": "legacy_dev/publish.sql:L1",
+      "reason": "structural contains_all signature",
+      "rule_id": "builtin.postgresql",
+      "rule_version": "1.0.0",
+      "source_hash": "d80113c92f0f2b62c440c008d2df7a575185a94216e352bf6518e5a38942ed2f",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:inventory",
+      "adapter_version": "1.0.0",
+      "artifact_id": "source:86eeb082421ef09a72cdc981",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:6f6d4d0302a1c2d4b59510d2",
+      "location": "arch_prod/[configured-scope]:L1",
+      "reason": "source_system definition: architecture_prod",
+      "rule_id": "inventory",
+      "rule_version": "1.0.0",
+      "source_hash": "8647daa1872d65945461d0b18f8872a8418ab680c24012d4f94077194b6c91f1",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:4712a77e5cb128eaac0ced14",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:86cfe125da9682adcaaf6fbc",
+      "location": "arch_dev/malformed-map.json:L1",
+      "reason": "Versioned environment metadata export with explicit component declarations and exact bindings; Environment-map format family candidate; adapter validates version/schema",
+      "rule_id": "builtin.environment-map",
+      "rule_version": "1.0.0",
+      "source_hash": "5a025670e9d693294f581011aba9afb5e8474fe274fad2475333aeda906c4f1e",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:inventory",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:4a656c4ef2b84ea668f6df6c",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:8aa87438f207ff7dd5ac5145",
+      "location": "adversarial/ambiguous.sql:L1",
+      "reason": "unknown_artifact",
+      "rule_id": "inventory",
+      "rule_version": "1.0.0",
+      "source_hash": "df81d7b2738bcb775dd99077714bc31c5f55f1edfedb4cc0e479ddaceefabb9d",
+      "status": "unknown"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:f6a1b919a76e736db6a5474d",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:8e69839264a6a97cf7e691f3",
+      "location": "arch_dev/future-map.json:L2",
+      "reason": "Environment-map format family candidate; adapter validates version/schema",
+      "rule_id": "builtin.environment-map",
+      "rule_version": "1.0.0",
+      "source_hash": "7f7094bdf509fc12f279e3b65ed3df8aa3fd9cd5139a3fa9e282efe303722a07",
+      "status": "unknown"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:341e02d3c6e9afe915f68a4d",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:905894d00228ede4f0379366",
+      "location": "modern_dev/README.md:L1",
+      "reason": "documentation mention only",
+      "rule_id": "builtin.airflow",
+      "rule_version": "1.0.0",
+      "source_hash": "2458388259b04c3c2a8fc57b9fa7b0b278c75ab47b503805b46bc76058df82a1",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:9fe3e932b2d0114aea436ef7",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:921bf9b5bf173401594801b3",
+      "location": "legacy_prod/transform.ktr:L1",
+      "reason": "structural xml_structure signature",
+      "rule_id": "builtin.pentaho",
+      "rule_version": "1.0.0",
+      "source_hash": "55959ca630079a6c4caf0d9f9bef4a2dfba4c6fce3618f756177198e51d717b8",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:inventory",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:3a1351a658863df2f8668e93",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:924bbc9df7fe0567a7b8cb67",
+      "location": "adversarial/unknown.workflow:L1",
+      "reason": "unknown_artifact",
+      "rule_id": "inventory",
+      "rule_version": "1.0.0",
+      "source_hash": "4e72f0c924e21c3bdfab9f912249d6a615c4dc3cce625cf8b6683b63282fe848",
+      "status": "unknown"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:9a568b178dd0c59aff979e28",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:941a1ad4843c362d9b3cffb6",
+      "location": "modern_dev/dag.py:L2",
+      "reason": "structural python_import signature",
+      "rule_id": "builtin.python",
+      "rule_version": "1.0.0",
+      "source_hash": "fe5f816b86c8e46364c02a448c1fc325bdd2ecae0feb8780ad2c29f8b06fec65",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:9f62ae9fe30855289d9b51c0",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:98811427968c8bfcd20d67ba",
+      "location": "adversarial/hostile.py:L2",
+      "reason": "structural python_import signature",
+      "rule_id": "builtin.python",
+      "rule_version": "1.0.0",
+      "source_hash": "de2fdf2c1e1a9d6cc731c32c0f8be66dc15c0873bbc5fbb2efbe3bde6a73dd76",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:7b5d4be5557d5dd2f5e01ef9",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:99ee9c96287e68afcc40382b",
+      "location": "legacy_dev/schedule.cron:L3",
+      "reason": "structural cron signature",
+      "rule_id": "builtin.cron",
+      "rule_version": "1.0.0",
+      "source_hash": "eed87b3025afe87d594928ce84ff09aa5a6c2d1eda4c3323caaa6effd52b0b18",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:inventory",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:d78457191d0eecfe5789874d",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:9a8ac4abbe6eac0444da419c",
+      "location": "adversarial/unsafe.ktr:L1",
+      "reason": "unsafe_xml",
+      "rule_id": "inventory",
+      "rule_version": "1.0.0",
+      "source_hash": "9c523c3ec4dd9458c3b2a39640d676a549a138b45a2946417a55111208ae26d8",
+      "status": "unknown"
+    },
+    {
+      "adapter": "builtin:inventory",
+      "adapter_version": "1.0.0",
+      "artifact_id": "source:057b234a1e587b8ac2e6cb3d",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:9d6e510d3b1ea73eef0a3460",
+      "location": "legacy_prod/[configured-scope]:L1",
+      "reason": "source_system definition: legacy_orders",
+      "rule_id": "inventory",
+      "rule_version": "1.0.0",
+      "source_hash": "8647daa1872d65945461d0b18f8872a8418ab680c24012d4f94077194b6c91f1",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:70ce12b23f23cb306ab75237",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:a8d5ada5a0e510b59ae11eb3",
+      "location": "legacy_dev/load.kjb:L1",
+      "reason": "structural xml_structure signature",
+      "rule_id": "builtin.pentaho",
+      "rule_version": "1.0.0",
+      "source_hash": "4e488797154e685644e008a2b879ca8c3ccb4623c4372f8a1706f5cc0c471d2e",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:38d6298ed7c9b42cca863027",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:abad13f2b14fbf651b0a5c64",
+      "location": "legacy_dev/README.md:L1",
+      "reason": "documentation mention only",
+      "rule_id": "builtin.postgresql",
+      "rule_version": "1.0.0",
+      "source_hash": "3fab6936856a9fb9baf580b527e665a8436ae10264370e5dcd00c743e4c069d8",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:20ae0a0abb76f7f50ac04db6",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:b261a4e82614e38257923249",
+      "location": "legacy_dev/transform.ktr:L5",
+      "reason": "structural contains_all signature",
+      "rule_id": "builtin.postgresql",
+      "rule_version": "1.0.0",
+      "source_hash": "55959ca630079a6c4caf0d9f9bef4a2dfba4c6fce3618f756177198e51d717b8",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:67f9cee49eb655d102580271",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:b3bcce12853e44c738490ab7",
+      "location": "modern_dev/requirements.txt:L1",
+      "reason": "structural dependency signature",
+      "rule_id": "builtin.airflow",
+      "rule_version": "1.0.0",
+      "source_hash": "b903f65a2c87f2693d81154d32304ece7d1b3c029dc21cb17b1868ec506b320d",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:6882c2fc19d08ce45e17bdde",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:ba807f4c9db7fab5237c7408",
+      "location": "arch_prod/environment-map.json:L1",
+      "reason": "Versioned environment metadata export with explicit component declarations and exact bindings; Environment-map format family candidate; adapter validates version/schema",
+      "rule_id": "builtin.environment-map",
+      "rule_version": "1.0.0",
+      "source_hash": "5efd827d8fe151c945ba5ad4549bdd54431c170b34542ca0e8cbc6a5f74f293f",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:inventory",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:d87653a3417f89e9ea9a8a6e",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:bb08efd61c594f400422a0fc",
+      "location": "arch_dev/compose-misleading.json:L1",
+      "reason": "unknown_artifact",
+      "rule_id": "inventory",
+      "rule_version": "1.0.0",
+      "source_hash": "ec964b0d8d021bfd30a761b07b8281050ce22c9c64e6dc075e7eff6dc264f215",
+      "status": "unknown"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:67f9cee49eb655d102580271",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:bf3cec88ee998903a880198e",
+      "location": "modern_dev/requirements.txt:L1",
+      "reason": "documentation mention only",
+      "rule_id": "builtin.python",
+      "rule_version": "1.0.0",
+      "source_hash": "b903f65a2c87f2693d81154d32304ece7d1b3c029dc21cb17b1868ec506b320d",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:inventory",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:51b27154cc4f5659020a3d3e",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:c3e8702c46f2da19ae138f4b",
+      "location": "legacy_prod/README.md:L1",
+      "reason": "unknown_artifact",
+      "rule_id": "inventory",
+      "rule_version": "1.0.0",
+      "source_hash": "c50ddd48a7986f3293eab1f39d2982302c38f71345164abc57be25a593e7f36f",
+      "status": "unknown"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:38d6298ed7c9b42cca863027",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:c49c52fe3f96e58d3f2bfed9",
+      "location": "legacy_dev/README.md:L1",
+      "reason": "documentation mention only",
+      "rule_id": "builtin.kafka",
+      "rule_version": "1.0.0",
+      "source_hash": "3fab6936856a9fb9baf580b527e665a8436ae10264370e5dcd00c743e4c069d8",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:inventory",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:84f2e94700679cb215e0afde",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:d59153f11d460d634cac3d58",
+      "location": "adversarial/PROMPT.md:L1",
+      "reason": "unknown_artifact",
+      "rule_id": "inventory",
+      "rule_version": "1.0.0",
+      "source_hash": "142f9ea22bade245be553119b917a34f5b71acce6c4052aa64e7191d088c2383",
+      "status": "unknown"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:341e02d3c6e9afe915f68a4d",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:d753b743f1d059b8de45eadc",
+      "location": "modern_dev/README.md:L1",
+      "reason": "documentation mention only",
+      "rule_id": "builtin.dbt",
+      "rule_version": "1.0.0",
+      "source_hash": "2458388259b04c3c2a8fc57b9fa7b0b278c75ab47b503805b46bc76058df82a1",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:inventory",
+      "adapter_version": "1.0.0",
+      "artifact_id": "source:83b2b846f084827888cd30a6",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:e24851e6898bd059aef2e208",
+      "location": "legacy_dev/[configured-scope]:L1",
+      "reason": "source_system definition: legacy_orders",
+      "rule_id": "inventory",
+      "rule_version": "1.0.0",
+      "source_hash": "8647daa1872d65945461d0b18f8872a8418ab680c24012d4f94077194b6c91f1",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:411e72b59020aa1c019c0594",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:e585ed62b791db42a8c63304",
+      "location": "legacy_dev/postgres-metadata.json:L1",
+      "reason": "structural json_fields signature",
+      "rule_id": "builtin.postgresql",
+      "rule_version": "1.0.0",
+      "source_hash": "4b576bf0613843c334f6f67dfd674e87d04eeefe8720e7d2fd05e628f6b32bca",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:inventory",
+      "adapter_version": "1.0.0",
+      "artifact_id": "source:83354ccd4aee8b119874b40e",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:e99ab946595612835a4a3fee",
+      "location": "adversarial/[configured-scope]:L1",
+      "reason": "source_system definition: untrusted_fixture",
+      "rule_id": "inventory",
+      "rule_version": "1.0.0",
+      "source_hash": "8647daa1872d65945461d0b18f8872a8418ab680c24012d4f94077194b6c91f1",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:487a792b603e24746259aea8",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:f0302ffa86f013ce711c5452",
+      "location": "adversarial/dbt-v11.json:L1",
+      "reason": "dbt manifest metadata and dependency containers; version support validated by adapter",
+      "rule_id": "builtin.dbt",
+      "rule_version": "1.0.0",
+      "source_hash": "e0c11acf5e11e9fe33186d2b08882eced029a06fe4a6286cf91f83839dbabb38",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:ed5ab0de7efbe10f833a31d6",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:f1144e103c19ff1eaf553e11",
+      "location": "legacy_dev/Dockerfile:L1",
+      "reason": "structural docker_from signature",
+      "rule_id": "builtin.docker",
+      "rule_version": "1.1.0",
+      "source_hash": "68466988f9b2c71d4c0864f099ab641da2a460b2e200f66261c3796ed4d763e5",
+      "status": "declared"
+    },
+    {
+      "adapter": "builtin:detector",
+      "adapter_version": "1.0.0",
+      "artifact_id": "artifact:341e02d3c6e9afe915f68a4d",
+      "collected_at": "2026-10-30T01:00:24+00:00",
+      "id": "evidence:fd12daffdca7f26ff7633b66",
+      "location": "modern_dev/README.md:L1",
+      "reason": "documentation mention only",
+      "rule_id": "builtin.snowflake",
+      "rule_version": "1.0.0",
+      "source_hash": "2458388259b04c3c2a8fc57b9fa7b0b278c75ab47b503805b46bc76058df82a1",
+      "status": "declared"
+    }
+  ],
+  "freshness": {
+    "collected_at": "2026-10-30T01:00:24+00:00",
+    "note": "Run status to compare current file hashes; offline documents cannot observe later changes. Runtime state is unknown.",
+    "state": "current_at_collection"
+  },
+  "issues": [
+    {
+      "artifact_id": "artifact:3a1351a658863df2f8668e93",
+      "code": "unknown_artifact",
+      "evidence": [
+        "evidence:924bbc9df7fe0567a7b8cb67"
+      ],
+      "message": "No supported structural signature. Provide format/schema metadata, an export, a reviewed detector/adapter, or human clarification.",
+      "severity": "warning"
+    },
+    {
+      "artifact_id": "artifact:4a656c4ef2b84ea668f6df6c",
+      "code": "unknown_artifact",
+      "evidence": [
+        "evidence:8aa87438f207ff7dd5ac5145"
+      ],
+      "message": "No supported structural signature. Provide format/schema metadata, an export, a reviewed detector/adapter, or human clarification.",
+      "severity": "warning"
+    },
+    {
+      "artifact_id": "artifact:51b27154cc4f5659020a3d3e",
+      "code": "unknown_artifact",
+      "evidence": [
+        "evidence:c3e8702c46f2da19ae138f4b"
+      ],
+      "message": "No supported structural signature. Provide format/schema metadata, an export, a reviewed detector/adapter, or human clarification.",
+      "severity": "warning"
+    },
+    {
+      "artifact_id": "artifact:84f2e94700679cb215e0afde",
+      "code": "unknown_artifact",
+      "evidence": [
+        "evidence:d59153f11d460d634cac3d58"
+      ],
+      "message": "No supported structural signature. Provide format/schema metadata, an export, a reviewed detector/adapter, or human clarification.",
+      "severity": "warning"
+    },
+    {
+      "artifact_id": "artifact:956d356457d98057ac27025a",
+      "code": "unknown_artifact",
+      "evidence": [
+        "evidence:6c34b6b13e770538b7d05489"
+      ],
+      "message": "No supported structural signature. Provide format/schema metadata, an export, a reviewed detector/adapter, or human clarification.",
+      "severity": "warning"
+    },
+    {
+      "artifact_id": "artifact:c0defa47c831d397ca0095d7",
+      "code": "unknown_artifact",
+      "evidence": [
+        "evidence:63fc2f7d30e01930962a837d"
+      ],
+      "message": "No supported structural signature. Provide format/schema metadata, an export, a reviewed detector/adapter, or human clarification.",
+      "severity": "warning"
+    },
+    {
+      "artifact_id": "artifact:d78457191d0eecfe5789874d",
+      "code": "unknown_artifact",
+      "evidence": [
+        "evidence:4903e5a044df9351cba97e31"
+      ],
+      "message": "No supported structural signature. Provide format/schema metadata, an export, a reviewed detector/adapter, or human clarification.",
+      "severity": "warning"
+    },
+    {
+      "artifact_id": "artifact:d78457191d0eecfe5789874d",
+      "code": "unsafe_xml",
+      "evidence": [
+        "evidence:9a8ac4abbe6eac0444da419c"
+      ],
+      "message": "DOCTYPE/entity XML rejected; supply a sanitized export without external entities.",
+      "severity": "warning"
+    },
+    {
+      "artifact_id": "artifact:d87653a3417f89e9ea9a8a6e",
+      "code": "unknown_artifact",
+      "evidence": [
+        "evidence:bb08efd61c594f400422a0fc"
+      ],
+      "message": "No supported structural signature. Provide format/schema metadata, an export, a reviewed detector/adapter, or human clarification.",
+      "severity": "warning"
+    },
+    {
+      "artifact_id": "artifact:ed5ab0de7efbe10f833a31d6",
+      "code": "version_conflict",
+      "evidence": [
+        "evidence:3e2229462c8c857b9060689e",
+        "evidence:e585ed62b791db42a8c63304"
+      ],
+      "message": "Conflicting server/deployment versions in this environment/service: 15.8, 16.4. Resolve deployment vs export age; runtime version is unknown.",
+      "severity": "warning"
+    }
+  ],
+  "links": [],
+  "metrics": {
+    "adapter_failures": 0,
+    "adapter_runs": 0,
+    "elapsed_seconds": 0.045754,
+    "extraction_cache": "disabled; every input is rehashed and reparsed",
+    "files": 34,
+    "input_bytes": 31083,
+    "resource_isolation": "spawned workers; wall time + platform-supported CPU/address-space limits"
+  },
+  "nodes": [
+    {
+      "attributes": {
+        "kind": "authorized_local_directory",
+        "runtime_observation": false,
+        "scope_id": "adversarial"
+      },
+      "environment": "test",
+      "evidence": [
+        "evidence:e99ab946595612835a4a3fee"
+      ],
+      "explanation": "untrusted_fixture is a declared source_system; execution is unverified.",
+      "id": "source_system:38e11d50be04f15ddb63eca9",
+      "kind": "source_system",
+      "name": "untrusted_fixture",
+      "namespace": "adversarial",
+      "rule_concepts": [
+        "unknown"
+      ],
+      "status": "declared",
+      "technology": "unknown"
+    },
+    {
+      "attributes": {
+        "kind": "authorized_local_directory",
+        "runtime_observation": false,
+        "scope_id": "legacy_dev"
+      },
+      "environment": "dev",
+      "evidence": [
+        "evidence:e24851e6898bd059aef2e208"
+      ],
+      "explanation": "legacy_orders is a declared source_system; execution is unverified.",
+      "id": "source_system:6f9da33a8517552cc0285e25",
+      "kind": "source_system",
+      "name": "legacy_orders",
+      "namespace": "legacy_dev",
+      "rule_concepts": [
+        "unknown"
+      ],
+      "status": "declared",
+      "technology": "unknown"
+    },
+    {
+      "attributes": {
+        "kind": "authorized_local_directory",
+        "runtime_observation": false,
+        "scope_id": "arch_prod"
+      },
+      "environment": "prod",
+      "evidence": [
+        "evidence:6f6d4d0302a1c2d4b59510d2"
+      ],
+      "explanation": "architecture_prod is a declared source_system; execution is unverified.",
+      "id": "source_system:7259267c0df34360382b8640",
+      "kind": "source_system",
+      "name": "architecture_prod",
+      "namespace": "arch_prod",
+      "rule_concepts": [
+        "unknown"
+      ],
+      "status": "declared",
+      "technology": "unknown"
+    },
+    {
+      "attributes": {
+        "kind": "authorized_local_directory",
+        "runtime_observation": false,
+        "scope_id": "modern_dev"
+      },
+      "environment": "dev",
+      "evidence": [
+        "evidence:4d733e40169ff8934bef4f8e"
+      ],
+      "explanation": "analytics_warehouse is a declared source_system; execution is unverified.",
+      "id": "source_system:b237a79b9e8e161f2466930f",
+      "kind": "source_system",
+      "name": "analytics_warehouse",
+      "namespace": "modern_dev",
+      "rule_concepts": [
+        "unknown"
+      ],
+      "status": "declared",
+      "technology": "unknown"
+    },
+    {
+      "attributes": {
+        "kind": "authorized_local_directory",
+        "runtime_observation": false,
+        "scope_id": "arch_dev"
+      },
+      "environment": "dev",
+      "evidence": [
+        "evidence:1e7b7035f6325f70cd6354d5"
+      ],
+      "explanation": "architecture_dev is a declared source_system; execution is unverified.",
+      "id": "source_system:f98060c32ae93389a38d9e9f",
+      "kind": "source_system",
+      "name": "architecture_dev",
+      "namespace": "arch_dev",
+      "rule_concepts": [
+        "unknown"
+      ],
+      "status": "declared",
+      "technology": "unknown"
+    },
+    {
+      "attributes": {
+        "kind": "authorized_local_directory",
+        "runtime_observation": false,
+        "scope_id": "legacy_prod"
+      },
+      "environment": "prod",
+      "evidence": [
+        "evidence:9d6e510d3b1ea73eef0a3460"
+      ],
+      "explanation": "legacy_orders is a declared source_system; execution is unverified.",
+      "id": "source_system:f9fd9e192fc7c7750c34663e",
+      "kind": "source_system",
+      "name": "legacy_orders",
+      "namespace": "legacy_prod",
+      "rule_concepts": [
+        "unknown"
+      ],
+      "status": "declared",
+      "technology": "unknown"
+    }
+  ],
+  "phase": "discovery",
+  "project": "pipeline_handbook_architecture_recovery",
+  "references": [],
+  "registry_fingerprint": "27ef4cf3e398a25e676b7236bd68d396bf98caa06ce2353025eed5314cb795f2",
+  "schema_version": "1",
+  "snapshot_id": "d862994bf259cbc3124e3543",
+  "sources": [
+    {
+      "environment": "dev",
+      "exclude": [],
+      "id": "legacy_dev",
+      "include": [
+        "*"
+      ],
+      "kind": "directory",
+      "path": "scope:legacy_dev",
+      "resource_filters": [
+        "*"
+      ],
+      "schema_filters": [
+        "*"
+      ],
+      "service": "legacy_orders"
+    },
+    {
+      "environment": "prod",
+      "exclude": [],
+      "id": "legacy_prod",
+      "include": [
+        "*"
+      ],
+      "kind": "directory",
+      "path": "scope:legacy_prod",
+      "resource_filters": [
+        "*"
+      ],
+      "schema_filters": [
+        "*"
+      ],
+      "service": "legacy_orders"
+    },
+    {
+      "environment": "dev",
+      "exclude": [],
+      "id": "modern_dev",
+      "include": [
+        "*"
+      ],
+      "kind": "directory",
+      "path": "scope:modern_dev",
+      "resource_filters": [
+        "*"
+      ],
+      "schema_filters": [
+        "*"
+      ],
+      "service": "analytics_warehouse"
+    },
+    {
+      "environment": "test",
+      "exclude": [],
+      "id": "adversarial",
+      "include": [
+        "*"
+      ],
+      "kind": "directory",
+      "path": "scope:adversarial",
+      "resource_filters": [
+        "*"
+      ],
+      "schema_filters": [
+        "*"
+      ],
+      "service": "untrusted_fixture"
+    },
+    {
+      "environment": "dev",
+      "exclude": [],
+      "id": "arch_dev",
+      "include": [
+        "*"
+      ],
+      "kind": "directory",
+      "path": "scope:arch_dev",
+      "resource_filters": [
+        "*"
+      ],
+      "schema_filters": [
+        "*"
+      ],
+      "service": "architecture_dev"
+    },
+    {
+      "environment": "prod",
+      "exclude": [],
+      "id": "arch_prod",
+      "include": [
+        "*"
+      ],
+      "kind": "directory",
+      "path": "scope:arch_prod",
+      "resource_filters": [
+        "*"
+      ],
+      "schema_filters": [
+        "*"
+      ],
+      "service": "architecture_prod"
+    }
+  ]
+}

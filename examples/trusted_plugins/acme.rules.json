@@ -1,0 +1,46 @@
+{
+  "schema_version": "1",
+  "entries": [{
+    "id": "example.acme",
+    "version": "1.0.0",
+    "technology": "acme",
+    "family": "integration",
+    "applicable_versions": ["export-schema-1"],
+    "positive": [{
+      "kind": "json_fields",
+      "fields": {"technology": "acme", "export_schema": "1", "tasks": "$object"},
+      "category": "recognized",
+      "reason": "Fictional Acme export schema 1 contains explicit tasks"
+    }],
+    "negative": [],
+    "mention_terms": ["acme"],
+    "adapters": ["example:acme"],
+    "priority": 150,
+    "conflict_handling": "Preserve other candidates; unknown export schemas are not mapped.",
+    "applicability": "Fictional synthetic export schema 1 only; not a real vendor integration.",
+    "input_formats": ["json"],
+    "prerequisites": ["Explicitly configured reviewed rule directory and exact adapter ID trust"],
+    "features": {
+      "detection": "subset",
+      "version_identification": "unsupported",
+      "metadata_extraction": "subset",
+      "table_lineage": "subset",
+      "column_lineage": "unsupported",
+      "control_flow": "unsupported",
+      "schedules": "unsupported",
+      "runtime_evidence": "unsupported",
+      "documentation": "subset"
+    },
+    "limitations": ["Explicit qualified input/output declarations only; no column or runtime analysis."],
+    "access": ["Local export read only; no network or target-code execution"],
+    "configuration": ["adapters.plugins, adapters.trusted and rules.directories"],
+    "tests": ["tests/test_core.py"],
+    "fixtures": ["examples/trusted_plugins/acme-export.json"],
+    "maturity": "experimental",
+    "official_references": [],
+    "mapping": {
+      "concept": "pipeline",
+      "explanation": "{name} is a declared {kind} in the fictional Acme export; no run is observed."
+    }
+  }]
+}

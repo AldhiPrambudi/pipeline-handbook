@@ -1,0 +1,51 @@
+{
+  "name": "orders-platform",
+  "services": {
+    "postgres": {
+      "image": "postgres:16.4",
+      "networks": {
+        "data": {}
+      },
+      "volumes": [
+        {
+          "type": "volume",
+          "source": "orders_data",
+          "target": "/var/lib/postgresql/data"
+        }
+      ],
+      "environment": {
+        "POSTGRES_PASSWORD": "FAKE_ARCH_SECRET_CANARY_7231"
+      }
+    },
+    "airflow": {
+      "image": "apache/airflow:2.10.3",
+      "depends_on": {
+        "postgres": {
+          "condition": "service_healthy",
+          "required": true
+        }
+      },
+      "networks": {
+        "data": {}
+      }
+    },
+    "dbt": {
+      "image": "ghcr.io/dbt-labs/dbt-snowflake:1.8.4",
+      "depends_on": {
+        "airflow": {
+          "condition": "service_started",
+          "required": true
+        }
+      },
+      "networks": {
+        "data": {}
+      }
+    }
+  },
+  "networks": {
+    "data": {}
+  },
+  "volumes": {
+    "orders_data": {}
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "metadata": {
+    "dbt_schema_version": "https://schemas.getdbt.com/dbt/manifest/v11.json",
+    "dbt_version": "1.7.19",
+    "generated_at": "2026-01-15T00:00:00Z",
+    "project_name": "unsupported_schema_fixture"
+  },
+  "nodes": {},
+  "sources": {}
+}

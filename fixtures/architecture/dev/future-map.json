@@ -1,0 +1,9 @@
+{
+  "format": "pipeline-handbook.environment/v2",
+  "components": [
+    {
+      "name": "unsupported.future.component"
+    }
+  ],
+  "links": []
+}

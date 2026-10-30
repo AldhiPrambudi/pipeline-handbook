@@ -1,0 +1,9 @@
+{
+  "business_rows_included": false,
+  "policy": "strict-alias-projection/v1",
+  "profile": "ncbs-anonymized/v1",
+  "schema_version": "1",
+  "sha256": "68470e07034d8289b5fa85065fb2911659c954eb1749f3a6e42dde3fa908f73e",
+  "snapshot_file": "snapshot.json",
+  "source_code_included": false
+}
