@@ -7,6 +7,12 @@ with the handbook at
 The repository contains the implementation and reviewed public examples; Pages
 receives only the publication allowlist described below.
 
+Verified deployment on 2026-10-30: both public pages returned HTTP 200, and the
+hosted NCBS JSON matched the reviewed bundle and passed the strict publication
+validator. Local tests passed **137 checks**; GitHub CI passed on Python 3.11 and
+3.13. Both Pages build/deploy jobs passed. Exact run URLs, commit and measured
+scope are in [the deployment verification record](deployment-verification-2026-10-30.json).
+
 ## Reproduce the public build locally
 
 From this project's root, choose a new or empty staging directory:

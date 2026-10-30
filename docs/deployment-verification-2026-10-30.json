@@ -1,0 +1,72 @@
+{
+  "verification_date": "2026-10-30",
+  "implementation_commit": "dea242f3fd4aa8bf72b0bcbcbd6b33816695196d",
+  "repository": "https://github.com/AldhiPrambudi/pipeline-handbook",
+  "site": "https://aldhiprambudi.github.io/pipeline-handbook/",
+  "ncbs_case": "https://aldhiprambudi.github.io/pipeline-handbook/ncbs/",
+  "http_checks": {
+    "/": {
+      "status": 200,
+      "bytes": 695341,
+      "url": "https://aldhiprambudi.github.io/pipeline-handbook/"
+    },
+    "ncbs/": {
+      "status": 200,
+      "bytes": 638715,
+      "url": "https://aldhiprambudi.github.io/pipeline-handbook/ncbs/"
+    },
+    "ncbs/handbook.json": {
+      "status": 200,
+      "bytes": 599767,
+      "url": "https://aldhiprambudi.github.io/pipeline-handbook/ncbs/handbook.json"
+    },
+    "publication.json": {
+      "status": 200,
+      "bytes": 1371,
+      "url": "https://aldhiprambudi.github.io/pipeline-handbook/publication.json"
+    }
+  },
+  "local_tests": {
+    "passed": 137,
+    "elapsed_seconds": 19.842,
+    "python": "3.13.1"
+  },
+  "github_ci": {
+    "url": "https://github.com/AldhiPrambudi/pipeline-handbook/actions/runs/41028912496",
+    "conclusion": "success",
+    "python_matrix": [
+      "3.11",
+      "3.13"
+    ]
+  },
+  "github_pages": {
+    "url": "https://github.com/AldhiPrambudi/pipeline-handbook/actions/runs/41029777730",
+    "build": "success",
+    "deploy": "success",
+    "deployment_branch": "main",
+    "default_workflow_permissions": "read"
+  },
+  "ncbs_test": {
+    "artifacts": 186,
+    "declared_service_definitions": 12,
+    "primary_definition_profiles": 5,
+    "nodes": 43,
+    "edges": 26,
+    "adapter_failures": 0,
+    "source_files_rehashed_unchanged": 186,
+    "existing_working_tree_preserved": true,
+    "target_code_executed": false,
+    "runtime_observations": false,
+    "full_dbt_lineage_available": false
+  },
+  "publication": {
+    "policy": "strict-alias-projection/v1",
+    "hosted_case_matches_reviewed_bundle": true,
+    "hosted_case_validator_passed": true,
+    "raw_ncbs_source_published": false,
+    "business_rows_published": false,
+    "anonymized_ncbs_metadata_published": true,
+    "private_mapping_and_local_state_excluded": true,
+    "snapshot": "614e367ff312a8b4a46709d9"
+  }
+}
